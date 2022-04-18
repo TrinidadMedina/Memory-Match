@@ -4,6 +4,7 @@
 //
 import pokemon from '../data/pokemon/pokemon.js';
 let arrayImg =[];
+console.log("TEST");
 
 const App = () => {
   for (let i=0;i<pokemon.items.length;i++){
