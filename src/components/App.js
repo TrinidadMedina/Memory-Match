@@ -2,25 +2,31 @@
 // Para incluir los diferentes sets de cartas podemos _importar_ el archivo
 // JavasSript que contenga el `export` correspondiente...
 //
-// import pokemon from '../data/pokemon/pokemon.js';
-// console.log(pokemon);
-//
-// O alternativamente podríamos cargar el JSON de forma asíncrona usando
-// `fetch` en el momento que consideremos necesario.
-//
-// fetch('./data/pokemon/pokemon.json')
-//   .then(resp => resp.json())
-//   .then(console.log)
-//   .catch(console.error);
-//
+import pokemon from '../data/pokemon/pokemon.js';
+let arrayImg =[];
 
 const App = () => {
-  const el = document.createElement('div');
-
-  el.className = 'App';
-  el.textContent = 'Hola mundo!';
-
-  return el;
+  for (let i=0;i<pokemon.items.length;i++){
+    arrayImg.push(pokemon.items[i].image);
+  }
+  let div = document.createElement("div");
+  arrayImg = arrayImg.reverse();
+  console.log(arrayImg);
+  function shuffle (){
+    for (let i=0;i<arrayImg.length;i++){
+      let ranNumLoop = arrayImg[i];
+      let randomNum = Math.floor(Math.random() * (arrayImg.length-i))+i; 
+      arrayImg[i]= arrayImg[randomNum];// cambiar de valor posición num   
+      arrayImg[randomNum] = ranNumLoop; // reposicionar valor de posición random  
+      let el = document.createElement('img');
+      el.className = "imgShow";
+      el.src = arrayImg[i];
+      div.appendChild(el);
+    }
+    console.log(arrayImg);
+    }
+  shuffle(arrayImg);
+  return div;
 };
 
 export default App;
