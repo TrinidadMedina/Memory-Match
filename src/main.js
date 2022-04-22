@@ -1,3 +1,12 @@
-import App from './components/App.js';
+import  board from './components/App.js';
 
-document.getElementById('root').appendChild(App());
+
+const prueba = document.getElementById('gameContainer')
+prueba.appendChild(board.createBoardElements())
+
+board.selectCard()
+
+console.log(board.cardList)
+console.log(board.createArrayCards())
+
+
