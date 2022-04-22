@@ -1,46 +1,56 @@
 import pokemon from '../data/pokemon/pokemon.js';
-
-
-const board = {
-  App : () => {
-    return console.log('App ');
-    },
-
-  cardList : pokemon.items,
-
-
-  createArrayCards : () => {
-    let array = [];
-    for(let i in pokemon.items){
-      array.push(pokemon.items[i].image)
-      
-    }
-    return array
+let cardList = pokemon.items;
+const  App = {
+  
+  duplicateCards : () => {
+    for(let i in cardList){
+        cardList.push(cardList[i]); 
+        console.log(pokemon.items.length);
+    } return cardList;
   },
   
+  /*createCardsImage : () => {
+    let cardListImage = [];
+    for(let i in pokemon.items){
+      cardListImage.push(pokemon.items[i].image)  
+    }
+    return cardListImage;
+  },*/  
+  
+  shuffle : () => {
+    let shuffle = App.duplicateCards().sort (()=> Math.random()-0.5);
+    return shuffle;
+  },
+
   createBoardElements : () => {
     let div = document.createElement("div");
     div.className = "divCard";
-    for(let i in board.cardList){
-      let imgBack = document.createElement('img');
-      imgBack.src = "http://chetart.com/blog/wp-content/uploads/2012/05/playing-card-back.jpg";
-      imgBack.className = "image"
-      div.appendChild(imgBack);
-      }
-       
+    for(let i in App.shuffle()){
+      let miniDiv = document.createElement('div');
+      miniDiv.className = "miniDiv";
+      let front = document.createElement('img');
+      front.src = pokemon.items[i].image;
+      front.className = "front";
+      front.id = pokemon.items[i].id;
+      let back = document.createElement('img');
+      back.src = "http://chetart.com/blog/wp-content/uploads/2012/05/playing-card-back.jpg";
+      back.setAttribute('style', 'height: 140; width: 120px;');
+      back.className = 'back';
+      //miniDiv.appendChild(back);
+      //miniDiv.appendChild(front);
+      div.appendChild(front);
+      //Dar vuelta la carta
+      //card.addEventListener("click", App.pickCard, false)
+    }
     return div;
-    },
-
-  selectCard : () => {
-    for(let i in board.createArrayCards()){
-    board.createBoardElements().addEventListener('click', function(){
-      alert('click');
-  
-      })
-    } 
-  }
+  },
+/*
+  pickCard : () => {
+      card.src=App.shuffle()[i];
+      console.log(card.src);
+  },*/
 }
- export default board;
+export default App;
 
 
 //   let div = document.createElement("div");
@@ -63,7 +73,7 @@ const board = {
 
 
 //  arrayImg = arrayImg.reverse();
-//   arrayImg.sort (()=> Math.random()-0.5);
+//   
 
 
 
