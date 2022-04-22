@@ -13,6 +13,7 @@ const board = {
     let array = [];
     for(let i in pokemon.items){
       array.push(pokemon.items[i].image)
+      
     }
     return array
   },
