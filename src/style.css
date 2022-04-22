@@ -1,23 +1,33 @@
-/*.carta-box {
-    position: relative;
-    perspective: 1000px;
+/* .carta-box {
+  position: relative;
+  perspective: 1000px;
 }
-  
+
 .carta-box:hover .carta {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .carta {
-    transform-style: preserve-3d;
-    transition: all 0.5s linear;
+  transform-style: preserve-3d;
+  transition: all 0.5s linear;
 }
-    
+
 .cara {
-    position: absolute;
-    backface-visibility: hidden;
+  position: absolute;
+  backface-visibility: hidden;
 }
-      
+
 .cara.detras {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
+} */
+
+.cara-detras {
+  outline: 2px solid red;
+
+  margin: 5%;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
-*/
+
+img {
+}
