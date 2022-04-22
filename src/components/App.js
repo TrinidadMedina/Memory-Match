@@ -34,11 +34,10 @@ const  App = {
       front.id = pokemon.items[i].id;
       let back = document.createElement('img');
       back.src = "http://chetart.com/blog/wp-content/uploads/2012/05/playing-card-back.jpg";
-      back.setAttribute('style', 'height: 140; width: 120px;');
       back.className = 'back';
-      //miniDiv.appendChild(back);
-      //miniDiv.appendChild(front);
-      div.appendChild(front);
+      miniDiv.appendChild(front);
+      miniDiv.appendChild(back);
+      div.appendChild(miniDiv);
       //Dar vuelta la carta
       //card.addEventListener("click", App.pickCard, false)
     }

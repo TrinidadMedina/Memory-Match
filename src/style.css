@@ -4,23 +4,45 @@
   padding: 0px;
 }
 
-#gameContainer{
-  width: 100%;
-  height: 100%;
-  position: fixed;
+body {
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+#gameContainer {
+  margin: 8% 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute; */
 }
 
 .divCard {
-  outline: 2px solid black;
-  background-color: rgb(36, 163, 161);
-  
+  /* position: relative; */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: rgb(255, 255, 255);
   height: 100%;
   width: 100%;
-  
 }
 
-  
+.miniDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10%;
+}
 
+.back {
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  /* position: absolute; */
+}
 
+.front {
+  position: relative;
+}
