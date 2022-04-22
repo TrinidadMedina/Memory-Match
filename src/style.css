@@ -1,33 +1,26 @@
-/* .carta-box {
-  position: relative;
-  perspective: 1000px;
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-.carta-box:hover .carta {
-  transform: rotateY(180deg);
+#gameContainer{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-.carta {
-  transform-style: preserve-3d;
-  transition: all 0.5s linear;
+.divCard {
+  outline: 2px solid black;
+  background-color: rgb(36, 163, 161);
+  
+  height: 100%;
+  width: 100%;
+  
 }
 
-.cara {
-  position: absolute;
-  backface-visibility: hidden;
-}
+  
 
-.cara.detras {
-  transform: rotateY(180deg);
-} */
 
-.cara-detras {
-  outline: 2px solid red;
-
-  margin: 5%;
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-
-img {
-}
