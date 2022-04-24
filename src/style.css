@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -9,40 +9,83 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-}
+} */
 
-#gameContainer {
+/* #gameContainer {
+  outline: 2px solid red;
   margin: 8% 20%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* position: absolute; */
-}
+  align-content: center; /* position: absolute; */
+/* } */
 
-.divCard {
-  /* position: relative; */
+/* .divCard {
+  outline: 2px solid rgb(0, 255, 221);
   display: grid;
   grid-template-columns: auto auto auto auto;
   background-color: rgb(255, 255, 255);
   height: 100%;
   width: 100%;
-}
+} */
 
-.miniDiv {
+/* .miniDiv {
+  outline: 2px solid rgb(255, 162, 0);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10%;
+  top: inherit;
 }
 
 .back {
   position: absolute;
   width: 15%;
   height: 15%;
-  /* position: absolute; */
 }
 
 .front {
   position: relative;
+}
+
+.miniDiv.flip {
+  transform: rotateY(180deg);
+} */
+
+#gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divCard {
+  outline: 2px solid red;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.miniDiv {
+  outline: 2px solid blue;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.miniDiv:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+.front {
+  position: relative;
+  width: fit-content;
+}
+
+.back {
+  position: absolute;
+  width: fit-content;
+}
+
+.miniDiv.flip {
+  transform: rotateY(180deg);
 }

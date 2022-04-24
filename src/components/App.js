@@ -33,14 +33,20 @@ const  App = {
       front.className = "front";
       front.id = pokemon.items[i].id;
       let back = document.createElement('img');
-      back.src = "http://chetart.com/blog/wp-content/uploads/2012/05/playing-card-back.jpg";
+      back.src = "https://www.serebii.net/Toolbar/icon/gologo.png";
       back.className = 'back';
       miniDiv.appendChild(front);
       miniDiv.appendChild(back);
       div.appendChild(miniDiv);
+
+      miniDiv.addEventListener("click", function(){ 
+        let selectCard = this
+        selectCard.classList.add('flip');
+        console.log(selectCard)});
       //Dar vuelta la carta
       //card.addEventListener("click", App.pickCard, false)
     }
+
     return div;
   },
 /*
