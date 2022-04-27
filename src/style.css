@@ -1,91 +1,96 @@
-/* * {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-}
-
 body {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-} */
-
-/* #gameContainer {
-  outline: 2px solid red;
-  margin: 8% 20%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center; /* position: absolute; */
-/* } */
-
-/* .divCard {
-  outline: 2px solid rgb(0, 255, 221);
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  background-color: rgb(255, 255, 255);
-  height: 100%;
-  width: 100%;
-} */
-
-/* .miniDiv {
-  outline: 2px solid rgb(255, 162, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10%;
-  top: inherit;
+  cursor: url("https://www.shareicon.net/data/32x32/2016/08/01/640631_game_512x512.png"),
+    auto;
+  background-color: rgb(26, 194, 180);
+   height: 100%;
+   
 }
-
-.back {
-  position: absolute;
-  width: 15%;
-  height: 15%;
-}
-
-.front {
-  position: relative;
-}
-
-.miniDiv.flip {
-  transform: rotateY(180deg);
-} */
 
 #gameContainer {
-  display: flex;
-  justify-content: center;
+
+  background-color: rgb(255, 255, 255);
+  border-radius: 5%;
+  margin:10%;
+ padding: 10%;
+  display:flex;
+
   align-items: center;
+  justify-content: center; 
+
+  
 }
 
 .divCard {
-  outline: 2px solid red;
+  background-color: rgb(15, 94, 131);
+  border-radius: 5%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  
+  /* grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto; */
+  grid-gap: 4px;
+  padding: 4px;
+  grid-template-columns: repeat(4, 1fr);
+  /* margin: 10%; */
+  /* max-width: 100%;
+  max-height: 100%; */
 }
 
 .miniDiv {
-  outline: 2px solid blue;
-  display: flex;
+  padding-bottom: 0%;
+  display: inline-block;
+  vertical-align: top;
+  /* outline: 2px solid blue; */
+  /* display: flex;
   align-items: center;
-  width: fit-content;
+  align-content: center; */
+  transform: scale(1);
+  /* transform: rotateY(180deg); */
+}
+
+.card {
+  /* position: relative; */
+  max-width: 100%;
+  max-height: 100%;
+  padding-bottom: 0%;
+  border-radius: 10%;
+  /* transform: rotateY(180deg); */
+  cursor: url("https://www.shareicon.net/data/32x32/2016/08/01/640586_game_512x512.png"),auto}
+
+  .card:hover{
+    transform: scale(0.97);
+  }
+/* .back {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10%;
+
+    auto; */
+  /* backface-visibility: hidden; */
+}
+
+
+.miniDiv.flip {
+  transform: rotateY(180deg);
+  transition: transform 0.2s;
 }
 
 .miniDiv:active {
   transform: scale(0.97);
-  transition: transform 0.2s;
-}
-.front {
-  position: relative;
-  width: fit-content;
 }
 
-.back {
-  position: absolute;
-  width: fit-content;
+.front:hover {
+  transform: scale(0.97);
 }
 
-.miniDiv.flip {
-  transform: rotateY(180deg);
+.back:hover {
+  transform: scale(0.97);
+} 
+
+button {
+  margin-left: 40%;
+  font-size:xx-small;
+  color: white;
+  padding: 5px;
+  background-color: rgb(106, 106, 255);
 }
