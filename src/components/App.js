@@ -22,9 +22,14 @@ const App = {
     let shuffle = duplicateCardList.sort (()=> Math.random()-0.5);
     return shuffle;
   },
-  createBoardElements : (shuffleCardList) => {
+  createBoardElements : (shuffleCardList,duplicateCardList) => {
+    let bigDiv = document.createElement("div");
+    bigDiv.id = "bigDiv";
+    let divButton = document.createElement("div");
     let div = document.createElement("div");
     div.className = "divCard";
+    let restart = document.createElement("button");
+    restart.textContent = "Reiniciar"
     for(let i in shuffleCardList){
       let miniDiv = document.createElement('div');
       miniDiv.className = "miniDiv";
@@ -36,11 +41,18 @@ const App = {
       miniDiv.appendChild(card);
       div.appendChild(miniDiv);
       card.addEventListener("click", function() {
-        // console.log(card.currentTarget)
         App.pickCard(card,shuffleCardList);
-
-      })}
-    return div;
+      })
+      restart.addEventListener("click", function (){
+        App.shuffle(duplicateCardList);  
+        card.src = "https://w7.pngwing.com/pngs/324/645/png-transparent-pokemon-go-gotcha-video-game-jynx-pokeball-orange-pokemon-technology.png";
+        
+        })}
+    
+    divButton.appendChild(restart);
+    bigDiv.appendChild(div);
+    bigDiv.appendChild(divButton);
+    return bigDiv;
   },
 
   pickCard:(card,shuffleCardList)=>{
