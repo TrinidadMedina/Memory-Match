@@ -1,19 +1,19 @@
 import App from './components/App.js';
 
 
-
-const startBtn = document.getElementById("startBtn");
-
-startBtn.addEventListener("click", limitClicks);
-
-function limitClicks(){
-    //boton start
+if (location.href=="http://127.0.0.1:5500/src/index.html"){
+    document.getElementById("text").addEventListener('change',function(){
+    player = document.getElementById("text").value;
+    console.log(player);
+})
+}
+if (location.href!="http://127.0.0.1:5500/src/index.html"){
     let cardList = App.createCardList();
-let duplicateCardList = App.duplicateCards(cardList);
-let shuffleCardList = App.shuffle(duplicateCardList);
-let div = App.createBoardElements(shuffleCardList,duplicateCardList)
-    startBtn.remove();
-    document.getElementById('gameContainer').appendChild(div);  
+    let duplicatedList = App.duplicateList(cardList);
+    let shuffledList = App.shuffle(duplicatedList);
+    let bigDiv = App.createBoardElements(shuffledList);
+    document.getElementById('gameContainer').appendChild(bigDiv);
+
 }
 
     

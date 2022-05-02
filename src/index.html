@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html id="html1">
 
-    <title>Memory Match</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-      <div id="gameContainer"> <button id="startBtn">start</button> </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Match</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-  
-    <script src="main.js" type="module" ></script>
-  </body>
+<body>
+  <div id="container" class="container">
+    <div id="speaking" class="speaking">
+      <p> Hola! <input type="text" id="text" placeholder="escribe tu nombre aquí"></p>
+      <p>Se escaparon mis Pokemones y dicen que solo regresarán si encontramos a sus parejas... me ayudas a atraparlos?
+      </p>
+      <div class="start">
+        <a href="board.html" id="restart" class="restart">V a m o s !</a>
+      </div>
+    </div>
+    <img class="img-ash" src="index-ash-image.png" alt="">
+  </div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
