@@ -1,7 +1,7 @@
 import App from './components/App.js';
 
 
-if (location.href=="http://localhost:3000/"){
+if (location.href=="http://127.0.0.1:5500/src/index.html"){
 window.addEventListener('mouseover', function(){
     let audio = new Audio('pokemon-opening.mp3');
     audio.play();
@@ -12,7 +12,7 @@ window.addEventListener('mouseover', function(){
     console.log(player);
 })
 }
-if (location.href!="http://localhost:3000/"){
+if (location.href!="http://127.0.0.1:5500/src/index.html"){
     let cardList = App.createCardList();
     let duplicatedList = App.duplicateList(cardList);
     let shuffledList = App.shuffle(duplicatedList);

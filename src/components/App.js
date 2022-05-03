@@ -90,48 +90,47 @@ const App = {
         turn=0;
        
         if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
-          let audioMatch = new Audio('pokemon-recovery.mp3');
+          let audioMatch = new Audio('https://play.pokemonshowdown.com/audio/cries/clobbopus.mp3');
+          audioMatch.volume = 0.5;
           audioMatch.play();
           match++;
           console.log(match);
-          selectedCardsMiniDiv[0].style.visibility ="hidden";
-          selectedCardsMiniDiv[1].style.visibility ="hidden";
-          let pokebola = document.createElement('img');
-          pokebola.class='pokebola';
-          pokebola.src=selectedCardsMiniDiv[0].lastChild.currentSrc;
-          pokebola.style.width='50px'; 
-          pokebola.style.height='50px';
-          divPokebolas.appendChild(pokebola);
-          let bar = document.getElementById("myBar");
-          let width = (match*100)/(cardList.length);
-          bar.style.width = width + '%';
-          let modalContainer = document.getElementById("modalMatch");
-          modalContainer.childNodes[1].style.visibility="visible";
-          modalContainer.style.visibility="visible";
-          let matchImg = document.createElement('img');
-          matchImg.className = "match-img";
-          matchImg.src = selectedCardsMiniDiv[0].lastChild.currentSrc;
-          modalContainer.childNodes[1].childNodes[3].appendChild(matchImg);
-          setTimeout(function(){
-            modalContainer.childNodes[1].style.visibility="hidden";  
-            modalContainer.style.visibility="hidden";
-            matchImg.remove();
-          },3000); 
+            selectedCardsMiniDiv[0].style.visibility ="hidden";
+            selectedCardsMiniDiv[1].style.visibility ="hidden";
+            let pokebola = document.createElement('img');
+            pokebola.class='pokebola';
+            pokebola.src=selectedCardsMiniDiv[0].lastChild.currentSrc;
+            pokebola.style.width='50px'; 
+            pokebola.style.height='50px';
+            divPokebolas.appendChild(pokebola);
+            let bar = document.getElementById("myBar");
+            let width = (match*100)/(cardList.length);
+            bar.style.width = width + '%';
+            let modalContainer = document.getElementById("modalMatch");
+            modalContainer.childNodes[1].style.visibility="visible";
+            modalContainer.style.visibility="visible";
+            let matchImg = document.createElement('img');
+            matchImg.className = "match-img";
+            matchImg.src = selectedCardsMiniDiv[0].lastChild.currentSrc;
+            modalContainer.childNodes[1].childNodes[3].appendChild(matchImg);
+            setTimeout(function(){
+              modalContainer.childNodes[1].style.visibility="hidden";  
+              modalContainer.style.visibility="hidden";
+              matchImg.remove();
+            },3000); 
           selectedCardsMiniDiv = [];
           if(match===cardList.length){
             setTimeout(function(){
               App.modal();
-            },2000);
-          }
-          } else {
+            },2000)}
+          }else{
           setTimeout(function(){
             selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
             selectedCardsMiniDiv[1].style.transform = 'rotateY(0deg)';
-            selectedCardsMiniDiv = [];
-            
-          },2000); 
-        } 
-      }
+            selectedCardsMiniDiv = [];  
+            },2000); 
+          }
+        }
     },
 
     modal: function modal(){
