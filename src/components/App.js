@@ -2,11 +2,11 @@ import pokemon from '../data/pokemon/pokemon.js';
 let selectedCardsMiniDiv = [];
 let turn=0;
 let match=0;
+let cardList = pokemon.items; 
 
 const App = { 
 
   createCardList : () => {
-    let cardList = pokemon.items;  
     return cardList;
   },
 
@@ -47,7 +47,8 @@ const App = {
         divCard.className = "div-card"
         for(let i in duplicatedList){
             let miniDiv = document.createElement('div');
-            miniDiv.id = "miniDiv";
+            miniDiv.id = i;
+            miniDiv.name = duplicatedList[i].id;
             miniDiv.className = "mini-div";
             divCard.appendChild(miniDiv);
             let cardImageBack = document.createElement('img');
@@ -56,10 +57,9 @@ const App = {
             cardImageBack.src = "https://www.ubuy.com.pl/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvOTFCdURYbkl3c0wuX0FDX1NMMTUwMF8uanBn.jpg"
             miniDiv.appendChild(cardImageBack);
             let cardImageFront = document.createElement('img'); 
-            cardImageFront.id = duplicatedList[i].id;
+            cardImageFront.id = 'cardImageFront';
             cardImageFront.className = "card-image-front";
             cardImageFront.src = duplicatedList[i].image;
-            (i >=(duplicatedList.length)/2)? cardImageFront.title="Original":cardImageFront.title="Copy";
             miniDiv.appendChild(cardImageFront);  
             miniDiv.addEventListener('click', App.flipSelectedCard);     
         } 
@@ -70,52 +70,85 @@ const App = {
     },
 
     flipSelectedCard: function flipSelectedCard(){
-                turn++; 
-                let selectedCardMiniDiv = this
-                selectedCardsMiniDiv.push(selectedCardMiniDiv);
-                
-                selectedCardMiniDiv.style.transform = 'rotateY(180deg)'
-                return App.checkMatch()
+      turn++; 
+      this.style.transform = 'rotateY(180deg)';
+      selectedCardsMiniDiv.push(this);
+      if (turn===2 && selectedCardsMiniDiv[0].id==selectedCardsMiniDiv[1].id){
+        selectedCardsMiniDiv.pop();
+        turn=1;
+        console.log('no puedes la misma cartaaaaa');
+      }
+      else{
+        console.log('ojala que hagas match');
+        return App.checkMatch();
+      } 
     },   
             
     checkMatch: function checkMatch(){
-        if(turn===2){
+      if(turn===2){
+        turn=0;
+       
+        if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
+          match++;
+          console.log(match);
+          selectedCardsMiniDiv[0].style.visibility ="hidden";
+          selectedCardsMiniDiv[1].style.visibility ="hidden";
+          let pokebola = document.createElement('img');
+          pokebola.class='pokebola';
+          pokebola.src=selectedCardsMiniDiv[0].lastChild.currentSrc;
+          pokebola.style.width='50px'; 
+          pokebola.style.height='50px';
+          divPokebolas.appendChild(pokebola);
+          let bar = document.getElementById("myBar");
+          let width = (match*100)/(cardList.length);
+          bar.style.width = width + '%';
+        
+        
+            let modalContainer = document.getElementById("modalMatch");
+            modalContainer.childNodes[1].style.visibility="visible";
+            modalContainer.style.visibility="visible";
+            let matchImg = document.createElement('img');
+            matchImg.className = "match-img";
+            matchImg.src = selectedCardsMiniDiv[0].lastChild.currentSrc;
+            modalContainer.childNodes[1].childNodes[3].appendChild(matchImg);
+            
+            setTimeout(function(){
+            modalContainer.childNodes[1].style.visibility="hidden";  
+            modalContainer.style.visibility="hidden";
+            matchImg.remove();
+          },3000); 
+          
+          selectedCardsMiniDiv = [];
 
-            turn=0;
-              if(selectedCardsMiniDiv[0].lastElementChild.currentSrc===selectedCardsMiniDiv[1].lastElementChild.currentSrc&&
-              selectedCardsMiniDiv[0].lastElementChild.title!=selectedCardsMiniDiv[1].lastElementChild.title){
-                    match++;
-                    
-                    selectedCardsMiniDiv = [];  
-                    console.log('match');
-
-                
-                // }else{
-                //     setTimeout(function(){
-                //         selectedCardsMiniDiv[0].style.transform = 'rotateY(-0deg)';
-                //         selectedCardsMiniDiv[1].style.transform = 'rotateY(-0deg)'
-                //         selectedCardsMiniDiv = [];   
-                //     },1000);    
-                // }
-              }
-             
-        }      
+          if(match===cardList.length){
+            setTimeout(function(){
+              App.modal();
+            },2000);
+          }
+        } else {
+          setTimeout(function(){
+            selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
+            selectedCardsMiniDiv[1].style.transform = 'rotateY(0deg)';
+            selectedCardsMiniDiv = [];
+            
+          },2000); 
+        } 
+      }
     },
 
     modal: function modal(){
-        if(match===cardList.length){ //END GAME CONDITION 
-            //         setTimeout(function(){
-                    console.log("GANASTE!");
-            //         let modalContainer = document.getElementById("modalContainer");
-            //         modalContainer.childNodes[1].style.visibility="visible"
-            //         modalContainer.style.visibility="visible"
-            //         modalContainer.childNodes[1].childNodes[1].childNodes[1].addEventListener("click",function(){
-            //         modalContainer.childNodes[1].style.visibility="hidden"  
-            //         modalContainer.style.visibility="hidden"
-        }            
+      let modalContainer = document.getElementById("modalContainer");
+      modalContainer.childNodes[1].style.visibility="visible"
+      modalContainer.style.visibility="visible"
+      modalContainer.childNodes[1].childNodes[1].childNodes[1].addEventListener("click",function(){
+      modalContainer.childNodes[1].style.visibility="hidden"  
+      modalContainer.style.visibility="hidden"
+      })
+    },
 
-    }
-}
+   
+  }            
+
 export default App
 
 
