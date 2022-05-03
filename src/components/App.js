@@ -89,6 +89,7 @@ const App = {
             
   checkMatch: function checkMatch(){  
     if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
+      turn=0;
       let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
       audioMatch.volume = 0.9;
       audioMatch.play();
@@ -115,7 +116,7 @@ const App = {
         modalContainer.style.visibility="hidden";
         matchImg.remove();
         matchImg2.remove();
-        turn=0;
+        //turn=0;
         let pokebola = document.createElement('img');
         pokebola.class='pokebola';
         pokebola.src=selectedCardsMiniDiv[0].lastChild.currentSrc;
