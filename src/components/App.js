@@ -4,6 +4,7 @@ let turn=0;
 let match=0;
 let cardList = pokemon.items; 
 
+
 const App = { 
 
   createCardList : () => {
@@ -89,6 +90,8 @@ const App = {
         turn=0;
        
         if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
+          let audioMatch = new Audio('pokemon-recovery.mp3');
+          audioMatch.play();
           match++;
           console.log(match);
           selectedCardsMiniDiv[0].style.visibility ="hidden";
@@ -102,30 +105,25 @@ const App = {
           let bar = document.getElementById("myBar");
           let width = (match*100)/(cardList.length);
           bar.style.width = width + '%';
-        
-        
-            let modalContainer = document.getElementById("modalMatch");
-            modalContainer.childNodes[1].style.visibility="visible";
-            modalContainer.style.visibility="visible";
-            let matchImg = document.createElement('img');
-            matchImg.className = "match-img";
-            matchImg.src = selectedCardsMiniDiv[0].lastChild.currentSrc;
-            modalContainer.childNodes[1].childNodes[3].appendChild(matchImg);
-            
-            setTimeout(function(){
+          let modalContainer = document.getElementById("modalMatch");
+          modalContainer.childNodes[1].style.visibility="visible";
+          modalContainer.style.visibility="visible";
+          let matchImg = document.createElement('img');
+          matchImg.className = "match-img";
+          matchImg.src = selectedCardsMiniDiv[0].lastChild.currentSrc;
+          modalContainer.childNodes[1].childNodes[3].appendChild(matchImg);
+          setTimeout(function(){
             modalContainer.childNodes[1].style.visibility="hidden";  
             modalContainer.style.visibility="hidden";
             matchImg.remove();
           },3000); 
-          
           selectedCardsMiniDiv = [];
-
           if(match===cardList.length){
             setTimeout(function(){
               App.modal();
             },2000);
           }
-        } else {
+          } else {
           setTimeout(function(){
             selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
             selectedCardsMiniDiv[1].style.transform = 'rotateY(0deg)';
@@ -137,6 +135,8 @@ const App = {
     },
 
     modal: function modal(){
+      let audioWin = new Audio('caught-a-pokemon.mp3');
+      audioWin.play();
       let modalContainer = document.getElementById("modalContainer");
       modalContainer.childNodes[1].style.visibility="visible"
       modalContainer.style.visibility="visible"
