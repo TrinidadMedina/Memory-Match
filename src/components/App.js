@@ -52,7 +52,7 @@ const App = {
       let cardImageBack = document.createElement('img');
       cardImageBack.id = "cardImageBack"
       cardImageBack.className = "card-image-back";
-      cardImageBack.src = "https://www.ubuy.com.pl/productimg/?image=aHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL0kvOTFCdURYbkl3c0wuX0FDX1NMMTUwMF8uanBn.jpg"
+      cardImageBack.src = "pictures/back-goldencard-img.png"
       miniDiv.appendChild(cardImageBack);
       let cardImageFront = document.createElement('img'); 
       cardImageFront.id = 'cardImageFront';
