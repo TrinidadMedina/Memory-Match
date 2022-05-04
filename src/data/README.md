@@ -1,38 +1,74 @@
-# Data (sets de cartas)
+funciones:
 
-Este directorio (carpeta) contiene dos fuentes de datos (sets de cartas) que
-podemos usar en el proyecto. Cada set está en una sub-carpeta distinta:
+mostrar nombre
+- toma: caja de texto value
+- devuelve: nombre
+- funcion: desde html1 a js1 a html2
 
-* [`pokemon`](./pokemon)
-* [`webdev`](./webdev)
+boton start
+- toma: click
+- devuelve: html2
+- desde html1 a html2
 
-Dentro de cada carpeta encontrarás dos archivos: uno con la extensión `.js` y
-otro `.json`. Ambos archivos contienen la misma data; la diferencia es que el
-`.js` lo usaremos a través de un [`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import),
-mientras que el `.json` está ahí para opcionalmente cargar la data de forma
-asíncrona con [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API).
+crear lista cartas
+- toma: items pokemon
+- devuelve: lista cartas
+- desde base de datos a js2
 
-## ¿Cómo agrego mis propios sets de cartas?
+duplicar lista cartas
+-toma lista cartas
+- devuelve: cartas duplicadas
+- desde js2 a js2
 
-Éstas no son las únicas cartas que podemos usar. Si quieres puedes añadir los
-sets de cartas que consideres para tu aplicación. Si eliges agregar sets de
-cartas te recomendamos mantener la misma estructura de los datos (ambos sets de
-ejemplo usan la misma estructura).
+shufflear lista cartas
+- toma: cartas duplicadas
+- devuelve: cartas shufleadas
+- desde js2 a js2
 
-Por ejmplo, imaginemos que queremos agregar un set de cartas de gatitos. Para
-hacernos la vida más fácil, dupliquemos un set existente y modifiquémoslo:
+crear tablero
+- toma: cartas duplicadas (largo, imagenes)
+- devuelve tablero
+- desde js2 a js1
 
-```sh
-# Desde el directorio raíz de la aplicación en el terminal, copiamos
-# recursivamente (con la opción `-r`, ya que se trata de un directorio) el
-# directorio `data/pokemon` a la ruta `data/gatitos`.
-cp -r data/pokemon data/gatitos
+insertar tablero
+- toma: div html2
+- devuelve: tablero div html2
+- desde js1 a html2
 
-# Renombramos los archivos de la carpeta gatitos...
-mv data/gatitos/pokemon.js data/gatitos/gatitos.js
-mv data/gatitos/pokemon.json data/gatitos/gatitos.json
-```
+flip cartas
+- toma: click html2
+- devuelve carta girada en html2
+- devuelve divs girados a js2
+- desde js2 a html2, desde js2 a js2
 
-Ahora ya puedes editar el contenido de los archivos de gatitos según tus
-necesidades. Ten en cuenta que puedes cambiar el número de elementos (cartas) en
-cada set si quieres también cambiar la dificultad del juego :wink:.
+revisar match
+- toma: divs girados
+- devuelve: match / no match
+desde js2 a js2
+
+no match:
+- toma: revisar match, divs girados
+- devuelve divs girados
+desde js2 a html2
+
+match:
+- toma: revisar match, divs girados
+- devuelve: modal match, pokemones, barra sube.
+- desde js2 a html2?
+
+modal match:
+- toma div html2, divs girados
+- devuelve div mostrado por unos segundos
+
+barra sube:
+- toma div html2, match
+- devuelve: barra subida en html2
+- desde 
+
+pokemones van al jugador
+-toma divs girados, div html(creado en js)
+- devuelve pokemones al jugador html2
+
+modal win
+
+reiniciar
