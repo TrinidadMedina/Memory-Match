@@ -18,8 +18,6 @@ if (location.href!="http://127.0.0.1:5500/src/index.html"){
     let shuffledList = App.shuffle(duplicatedList);
     let bigDiv = App.createBoardElements(shuffledList);
     document.getElementById('gameContainer').appendChild(bigDiv);
-
-    
 }
 
     
