@@ -1,10 +1,18 @@
 @font-face {
   font-family: PokemonHollow;
-  src: url("Pokemon\ Hollow.ttf");
+  src: url("fonts/Pokemon\ Hollow.ttf");
 }
 @font-face {
   font-family: PokemonSolid;
-  src: url("Pokemon\ Solid.ttf");
+  src: url("fonts/Pokemon\ Solid.ttf");
+}
+@font-face {
+  font-family: PokemonByW;
+  src: url('fonts/pokemon_black_and_white_version.ttf');
+}
+@font-face {
+  font-family: PokemonDS;
+  src: url("fonts/pokemon-ds-font.ttf");
 }
 
 .start {
@@ -60,7 +68,8 @@
 }
 
 body {
-  font-family: "Courier New", Courier, monospace;
+  font-family: PokemonDS;
+  font-size: larger;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -172,7 +181,7 @@ body {
   display: flex;
   justify-content: space-around;
   font-size: xx-large;
-  font-family: sans-serif;
+  font-family: PokemonByW;
 }
 
 .close-button {
@@ -186,7 +195,7 @@ body {
   max-width: 50%;
 }
 .modal-body {
-  font-family: sans-serif;
+  font-family: PokemonDS;
   color: #000000;
   display: flex;
   text-align: center;
