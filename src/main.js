@@ -1,7 +1,6 @@
 import App from './components/App.js';
 
-let namePlayer = ""
-
+let namePlayer = "";
 
 if (location.href=="http://localhost:3000/"){
     document.getElementById("text").addEventListener('change',function(){
@@ -27,19 +26,15 @@ if (location.href=="http://localhost:3000/"){
 }
 
 if (location.href!="http://localhost:3000/"){
-    let audio = new Audio('audios/main-theme.mp3');
+/*     let audio = new Audio('audios/main-theme.mp3');
         audio.play();
         audio.volume = 0.1;
-        audio.loop=true;
+        audio.loop=true; */
     let cardList = App.createCardList();
     let duplicatedList = App.duplicateList(cardList);
     let shuffledList = App.shuffle(duplicatedList);
     let bigDiv = App.createBoardElements(shuffledList);
     document.getElementById('gameContainer').appendChild(bigDiv);
-    let winModal = document.getElementById('modalContainer');
-    if(App.checkMatch(winModal,)){
-        console.log('prueba true')
-    }  
 }
 
     
