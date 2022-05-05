@@ -35,6 +35,7 @@ body {
   justify-self: end;
   font-size: 12px;
   letter-spacing: 1em;
+  visibility: hidden;
 }
 .start:hover {
   text-shadow: 5px 5px rgb(97, 75, 2);
@@ -287,8 +288,14 @@ body {
   justify-content: space-around;
   font-size: xx-large;
   font-family: PokemonByW;
+  align-self: center;
 }
-
+.modal-message{
+  align-self: center;
+}
+.match-img{
+  align-self: center;
+}
 .close-button {
   font-size: xx-large;
   margin: 0%;

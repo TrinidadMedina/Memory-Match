@@ -91,7 +91,6 @@ const App = {
     if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
       turn=0;
       let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
-      audioMatch.volume = 0.9;
       audioMatch.play();
       match++;
       console.log(match);
@@ -146,7 +145,7 @@ const App = {
   },
 
   modal: function modal(){
-    let audioWin = new Audio('caught-a-pokemon.mp3');
+    let audioWin = new Audio('audios/caught-a-pokemon.mp3');
     audioWin.play();
     let modalContainer = document.getElementById("modalContainer"); //quitar getElement
     modalContainer.childNodes[1].style.visibility="visible"
