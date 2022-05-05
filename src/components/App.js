@@ -1,4 +1,5 @@
 import pokemon from '../data/pokemon/pokemon.js';
+import utilities from '../utilities.js';
 
 let selectedCardsMiniDiv = [];
 let turn=0;
@@ -37,7 +38,7 @@ const App = {
     divBar.appendChild(bar);
     player.appendChild(divBar);
     let divPokebolas = document.createElement('div');
-    divPokebolas.id = "divPokebolas";
+     divPokebolas.id = "divPokebolas";
     player.appendChild(divPokebolas);
     let divCard = document.createElement('div');
     divCard.id = "divCard"
@@ -97,45 +98,24 @@ const App = {
       console.log(match);
       selectedCardsMiniDiv[0].style.visibility ="hidden";
       selectedCardsMiniDiv[1].style.visibility ="hidden";
-      
-      let modalContainer = document.getElementById("modalMatch"); //quitar getElement
-      modalContainer.childNodes[1].style.visibility="visible";
-      modalContainer.style.visibility="visible";
-      let matchImg = document.createElement('img');
-      matchImg.className = "match-img";
-      matchImg.src = selectedCardsMiniDiv[0].lastChild.currentSrc;
-      modalContainer.childNodes[1].childNodes[3].appendChild(matchImg);
-      let matchImg2 = document.createElement('img');
-      matchImg2.className = "match-img";
-      matchImg2.src = selectedCardsMiniDiv[1].lastChild.currentSrc;
-      modalContainer.childNodes[1].childNodes[3].appendChild(matchImg2);
-
-
+      utilities.modalMatch(selectedCardsMiniDiv);
       setTimeout(function(){
-        modalContainer.childNodes[1].style.visibility="hidden";  
-        modalContainer.style.visibility="hidden";
-        matchImg.remove();
-        matchImg2.remove();
-        //turn=0;
         let pokebola = document.createElement('img');
         pokebola.class='pokebola';
         pokebola.src=selectedCardsMiniDiv[0].lastChild.currentSrc;
         pokebola.style.width='50px'; 
         pokebola.style.height='50px';
         divPokebolas.appendChild(pokebola);
-        let bar = document.getElementById("myBar");//quitar getElement
         let width = (match*100)/(cardList.length);
-        bar.style.width = width + '%';
+        myBar.style.width = width + '%';
         selectedCardsMiniDiv = [];
       },1500); 
-      
       if(match===cardList.length){
         setTimeout(function(){
-          App.modal();
+          utilities.modal();
         },3000);
-        return true
       }
-    }else{
+      }else{
       setTimeout(function(){
         console.log('no es match');
         selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
@@ -145,18 +125,6 @@ const App = {
       },1000);      
     }    
   },
-
-  modal: function modal(){
-    let audioWin = new Audio('audios/caught-a-pokemon.mp3');
-    audioWin.play();
-    let modalContainer = document.getElementById("modalContainer"); //quitar getElement
-    modalContainer.childNodes[1].style.visibility="visible"
-    modalContainer.style.visibility="visible"
-    modalContainer.childNodes[1].childNodes[1].childNodes[1].addEventListener("click",function(){
-      modalContainer.childNodes[1].style.visibility="hidden"  
-      modalContainer.style.visibility="hidden"
-    });
-  }, 
 
 }            
 
