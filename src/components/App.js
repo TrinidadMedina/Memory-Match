@@ -29,7 +29,7 @@ const App = {
     let player = document.createElement('div');
     player.id='player';
     player.className='player';
-    player.textContent='Maca';
+    player.textContent = localStorage.getItem('PlayerName')
     let divBar = document.createElement('div');
     divBar.id = "myProgress";
     let bar = document.createElement('div');
@@ -91,6 +91,7 @@ const App = {
     if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
       turn=0;
       let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
+      audioMatch.volume = 0.3;
       audioMatch.play();
       match++;
       console.log(match);
@@ -132,6 +133,7 @@ const App = {
         setTimeout(function(){
           App.modal();
         },3000);
+        return true
       }
     }else{
       setTimeout(function(){
