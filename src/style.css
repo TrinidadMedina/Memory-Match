@@ -150,7 +150,7 @@ body {
   background-image: url(pictures/Fondo\ Cielo\ Pokemon.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 100%;
+  background-position: 0%;
   border-radius: 1%;
   display: block;
 }
@@ -173,6 +173,7 @@ body {
   background-color: rgb(242, 242, 242, 0.7);
   border-radius: 5%;
   overflow: auto;
+  letter-spacing: 0.2em;
   font-family: PokemonSolid;
 }
 #myProgress {
@@ -290,10 +291,10 @@ body {
   font-family: PokemonByW;
   align-self: center;
 }
-.modal-message{
+.modal-message {
   align-self: center;
 }
-.match-img{
+.match-img {
   align-self: center;
 }
 .close-button {
