@@ -1,5 +1,5 @@
 export default {
-   modal:  function modal(){
+   modalWin:  function modalWin(){
         /*   let audioWin = new Audio('audios/caught-a-pokemon.mp3');
           audioWin.play(); */
           let modalContainer = document.getElementById('modalContainer');

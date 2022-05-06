@@ -112,7 +112,7 @@ const App = {
       },1500); 
       if(match===cardList.length){
         setTimeout(function(){
-          utilities.modal();
+          utilities.modalWin();
         },3000);
       }
       }else{
@@ -120,6 +120,10 @@ const App = {
         console.log('no es match');
         selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
         selectedCardsMiniDiv[1].style.transform = 'rotateY(0deg)';
+        let audioNoMatch = new Audio("audios/nope.mp3");
+        audioNoMatch.playbackRate=2
+        audioNoMatch.volume = 0.7;
+        audioNoMatch.play();
         selectedCardsMiniDiv = [];  
         turn=0; 
       },1000);      
