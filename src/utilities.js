@@ -1,10 +1,11 @@
 export default {
-  modalWin:()=>{
+  modalWin:(counting)=>{
     let audioWin = new Audio('audios/caught-a-pokemon.mp3');
     audioWin.play();
     let modalContainer = document.getElementById('modalContainer');
     modalContainer.childNodes[1].style.visibility="visible";
     modalContainer.style.visibility="visible";
+    document.getElementById('modaWinH2').textContent='Recuperaste a los pokemones en solo '+counting+' intentos';
   },
   
   modalMatch:(selectedCardsMiniDiv)=>{
