@@ -10,61 +10,66 @@ const App = {
   createCardList : () => {
     return cardList;
   },
+
   duplicateList : (cardList) => {
     let duplicatedList = cardList.concat(cardList);
     return duplicatedList;
   },
+
   shuffle : (duplicatedList)=>{
-    for(let i=0; i<duplicatedList.length;i++ ){
-        let randomNumber = Math.floor(Math.random() * (duplicatedList.length-i))+i;
-        let ranNumLoop = duplicatedList[i]
-        duplicatedList[i]=duplicatedList[randomNumber]
-        duplicatedList[randomNumber] = ranNumLoop
+    let shuffled =[];
+    shuffled = shuffled.concat(duplicatedList);
+    for(let i=0; i<shuffled.length;i++ ){
+      let randomNumber = Math.floor(Math.random() * (shuffled.length-i))+i;
+      let ranNumLoop = shuffled[i];
+      shuffled[i]=shuffled[randomNumber];
+      shuffled[randomNumber] = ranNumLoop;
     }
-    return duplicatedList
+    return shuffled;
   },
-  createBoardElements: (duplicatedList)=>{
+
+  createBoardElements: (shuffled)=>{
     let bigDiv = document.createElement("div");
-    bigDiv.id = "bigDiv";
-    bigDiv.className = "big-div"
     let player = document.createElement('div');
-    player.id='player';
-    player.className='player';
-    player.textContent = localStorage.getItem('PlayerName')
     let divBar = document.createElement('div');
-    divBar.id = "myProgress";
     let bar = document.createElement('div');
+    let divPokebolas = document.createElement('div');
+    let divCard = document.createElement('div');
+    bigDiv.id = "bigDiv";
+    player.id='player';
+    divBar.id = "myProgress";
     bar.id = 'myBar';
+    divPokebolas.id = "divPokebolas";
+    divCard.id = "divCard";
+    bigDiv.className = "big-div";
+    player.className='player';
+    divCard.className = "div-card";
+    player.textContent = localStorage.getItem('PlayerName');
     divBar.appendChild(bar);
     player.appendChild(divBar);
-    let divPokebolas = document.createElement('div');
-     divPokebolas.id = "divPokebolas";
     player.appendChild(divPokebolas);
-    let divCard = document.createElement('div');
-    divCard.id = "divCard"
-    divCard.className = "div-card"
-    for(let i in duplicatedList){
+    bigDiv.appendChild(player);
+    bigDiv.appendChild(divCard); 
+    for(let i in shuffled){
       let miniDiv = document.createElement('div');
       miniDiv.id = i;
-      miniDiv.name = duplicatedList[i].id;
+      miniDiv.name = shuffled[i].id;
       miniDiv.className = "mini-div";
-      miniDiv.audio = duplicatedList[i].audio;
+      miniDiv.audio = shuffled[i].audio;
       divCard.appendChild(miniDiv);
       let cardImageBack = document.createElement('img');
-      cardImageBack.id = "cardImageBack"
+      cardImageBack.id = "cardImageBack";
       cardImageBack.className = "card-image-back";
-      cardImageBack.src = "pictures/back-goldencard-img.png"
+      cardImageBack.src = "pictures/back-goldencard-img.png";
       miniDiv.appendChild(cardImageBack);
       let cardImageFront = document.createElement('img'); 
       cardImageFront.id = 'cardImageFront';
       cardImageFront.className = "card-image-front";
-      cardImageFront.src = duplicatedList[i].image;
+      cardImageFront.src = shuffled[i].image;
       miniDiv.appendChild(cardImageFront);  
       miniDiv.addEventListener('click', App.flipSelectedCard);        
-    } 
-    bigDiv.appendChild(player)
-    bigDiv.appendChild(divCard);       
-    return bigDiv 
+    }       
+    return bigDiv; 
   },
 
   flipSelectedCard: function flipSelectedCard(){
@@ -75,10 +80,8 @@ const App = {
       if (turn===2 && selectedCardsMiniDiv[0].id==selectedCardsMiniDiv[1].id){
         selectedCardsMiniDiv.pop();
         turn=1;
-        console.log('no puedes la misma cartaaaaa');
       }
       else{
-        console.log('ojala que hagas match');
         if (turn ===2){
           setTimeout(function(){
             return App.checkMatch();
@@ -90,46 +93,35 @@ const App = {
             
   checkMatch: function checkMatch(){  
     if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
-      turn=0;
       let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
-      audioMatch.volume = 0.3;
+      audioMatch.volume = 0.9;
       audioMatch.play();
       match++;
-      console.log(match);
       selectedCardsMiniDiv[0].style.visibility ="hidden";
       selectedCardsMiniDiv[1].style.visibility ="hidden";
       utilities.modalMatch(selectedCardsMiniDiv);
-      setTimeout(function(){
-        let pokebola = document.createElement('img');
-        pokebola.class='pokebola';
-        pokebola.src=selectedCardsMiniDiv[0].lastChild.currentSrc;
-        pokebola.style.width='50px'; 
-        pokebola.style.height='50px';
-        divPokebolas.appendChild(pokebola);
-        let width = (match*100)/(cardList.length);
-        myBar.style.width = width + '%';
-        selectedCardsMiniDiv = [];
-      },1500); 
+      utilities.catchPokemon(selectedCardsMiniDiv);
+      utilities.fillBar(cardList,match);
+      turn=0;
+      selectedCardsMiniDiv = [];
       if(match===cardList.length){
         setTimeout(function(){
           utilities.modalWin();
         },3000);
       }
-      }else{
+    }else{
       setTimeout(function(){
-        console.log('no es match');
         selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
         selectedCardsMiniDiv[1].style.transform = 'rotateY(0deg)';
         let audioNoMatch = new Audio("audios/nope.mp3");
-        audioNoMatch.playbackRate=2
+        audioNoMatch.playbackRate=2;
         audioNoMatch.volume = 0.7;
         audioNoMatch.play();
-        selectedCardsMiniDiv = [];  
-        turn=0; 
+        turn=0;
+        selectedCardsMiniDiv = []; 
       },1000);      
     }    
   },
-
 }            
 
 export default App;
