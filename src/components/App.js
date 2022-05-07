@@ -4,6 +4,7 @@ import utilities from '../utilities.js';
 let selectedCardsMiniDiv = [];
 let turn=0;
 let match=0;
+let counting=0;
 let cardList = pokemon.items; 
 
 const App = { 
@@ -31,12 +32,16 @@ const App = {
   createBoardElements: (shuffled)=>{
     let bigDiv = document.createElement("div");
     let player = document.createElement('div');
+    let divCount = document.createElement('div');
+    let divProgress = document.createElement('div');
     let divBar = document.createElement('div');
     let bar = document.createElement('div');
     let divPokebolas = document.createElement('div');
+    let parCaptures = document.createElement('div');
     let divCard = document.createElement('div');
     bigDiv.id = "bigDiv";
     player.id='player';
+    divCount.id ='divCount';
     divBar.id = "myProgress";
     bar.id = 'myBar';
     divPokebolas.id = "divPokebolas";
@@ -44,9 +49,15 @@ const App = {
     bigDiv.className = "big-div";
     player.className='player';
     divCard.className = "div-card";
-    player.textContent = localStorage.getItem('PlayerName');
+    player.textContent = 'Jugador@: '+localStorage.getItem('PlayerName');
+    divCount.textContent='Intentos: '+counting;
+    divProgress.textContent='Progreso: ';
+    parCaptures.textContent='Capturas: ';
+    player.appendChild(divCount);
+    player.appendChild(divProgress);
     divBar.appendChild(bar);
     player.appendChild(divBar);
+    player.appendChild(parCaptures);
     player.appendChild(divPokebolas);
     bigDiv.appendChild(player);
     bigDiv.appendChild(divCard); 
@@ -92,6 +103,10 @@ const App = {
   },   
             
   checkMatch:()=>{  
+    counting++;
+    setTimeout(function(){
+      divCount.textContent='Intentos: '+counting;
+    },1000); 
     if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
       let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
       audioMatch.volume = 0.9;
@@ -106,7 +121,7 @@ const App = {
       selectedCardsMiniDiv = [];
       if(match===cardList.length){
         setTimeout(function(){
-          utilities.modalWin();
+          utilities.modalWin(counting);
         },3000);
       }
     }else{
