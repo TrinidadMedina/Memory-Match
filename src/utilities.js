@@ -1,17 +1,13 @@
 export default {
-  modalWin:  function modalWin(){
+  modalWin:()=>{
     let audioWin = new Audio('audios/caught-a-pokemon.mp3');
     audioWin.play();
     let modalContainer = document.getElementById('modalContainer');
     modalContainer.childNodes[1].style.visibility="visible";
     modalContainer.style.visibility="visible";
-    modalContainer.childNodes[1].childNodes[1].childNodes[1].addEventListener("click",function(){
-      modalContainer.childNodes[1].style.visibility="hidden";
-      modalContainer.style.visibility="hidden";
-    });
   },
   
-  modalMatch: function modalMatch(selectedCardsMiniDiv){
+  modalMatch:(selectedCardsMiniDiv)=>{
     let modalContainer = document.getElementById("modalMatch");
     modalContainer.childNodes[1].style.visibility="visible";
     modalContainer.style.visibility="visible";
@@ -31,7 +27,7 @@ export default {
     },1500); 
   },
 
-  catchPokemon: function catchPokemon(selectedCardsMiniDiv){
+  catchPokemon:(selectedCardsMiniDiv)=>{
     setTimeout(function(){
       let pokebola = document.createElement('img');
       pokebola.class='pokebola';
@@ -42,7 +38,7 @@ export default {
     },1500); 
   },
 
-  fillBar: function fillBar(cardList,match){
+  fillBar:(cardList,match)=>{
     setTimeout(function(){
       let width = (match*100)/(cardList.length);
       document.getElementById("myBar").style.width = width + '%';

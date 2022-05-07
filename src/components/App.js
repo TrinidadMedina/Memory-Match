@@ -91,7 +91,7 @@ const App = {
     }
   },   
             
-  checkMatch: function checkMatch(){  
+  checkMatch:()=>{  
     if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
       let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
       audioMatch.volume = 0.9;
