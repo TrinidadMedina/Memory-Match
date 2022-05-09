@@ -6,9 +6,13 @@ export default {
     modalContainer.childNodes[1].style.visibility="visible";
     modalContainer.style.visibility="visible";
     document.getElementById('modaWinH2').textContent='Recuperaste a los pokemones en solo '+counting+' intentos';
+    return modalContainer;
   },
   
   modalMatch:(selectedCardsMiniDiv)=>{
+    let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
+    audioMatch.volume = 0.9;
+    audioMatch.play(); 
     let modalContainer = document.getElementById("modalMatch");
     modalContainer.childNodes[1].style.visibility="visible";
     modalContainer.style.visibility="visible";
