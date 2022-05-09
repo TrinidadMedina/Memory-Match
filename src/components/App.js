@@ -97,48 +97,53 @@ const App = {
       else{
         if (turn ===2){
           setTimeout(function(){
-            return App.checkMatch();
+             counting++;
+            divCount.textContent='Intentos: '+counting;
+            return App.checkMatch(selectedCardsMiniDiv);
           },850) 
         }
       } 
     }
   },   
-            
-  checkMatch:()=>{  
-    counting++;
-    setTimeout(function(){
-      divCount.textContent='Intentos: '+counting;
-    },1000); 
+  checkMatch: (selectedCardsMiniDiv)=>{
     if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
-      let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
-      audioMatch.volume = 0.9;
-      audioMatch.play();
-      match++;
-      selectedCardsMiniDiv[0].style.visibility ="hidden";
-      selectedCardsMiniDiv[1].style.visibility ="hidden";
-      utilities.modalMatch(selectedCardsMiniDiv);
-      utilities.catchPokemon(selectedCardsMiniDiv);
-      utilities.fillBar(cardList,match);
-      turn=0;
-      selectedCardsMiniDiv = [];
-      if(match===cardList.length){
-        setTimeout(function(){
-          utilities.modalWin(counting);
-        },3000);
-      }
-    }else{
-      setTimeout(function(){
-        selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
-        selectedCardsMiniDiv[1].style.transform = 'rotateY(0deg)';
-        let audioNoMatch = new Audio("audios/nope.mp3");
-        audioNoMatch.playbackRate=2;
-        audioNoMatch.volume = 0.7;
-        audioNoMatch.play();
-        turn=0;
-        selectedCardsMiniDiv = []; 
-      },1000);      
-    }    
+      App.match();
+    } else {
+      App.noMatch();
+    }
   },
-}            
+
+  match:()=>{  
+    let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
+    audioMatch.volume = 0.9;
+    audioMatch.play();    
+    match++;
+    selectedCardsMiniDiv[0].style.visibility ="hidden";
+    selectedCardsMiniDiv[1].style.visibility ="hidden";
+    utilities.modalMatch(selectedCardsMiniDiv);
+    utilities.catchPokemon(selectedCardsMiniDiv);
+    utilities.fillBar(cardList,match);
+    turn=0;
+    selectedCardsMiniDiv = [];
+    if(match===cardList.length){
+      setTimeout(function(){
+        utilities.modalWin(counting);
+      },3000);
+    }
+ },
+
+  noMatch: ()=>{
+    setTimeout(function(){
+      selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
+      selectedCardsMiniDiv[1].style.transform = 'rotateY(0deg)';
+      let audioNoMatch = new Audio("audios/nope.mp3");
+      audioNoMatch.playbackRate=2;
+      audioNoMatch.volume = 0.7;
+      audioNoMatch.play();
+      turn=0;
+      selectedCardsMiniDiv = []; 
+    },1000);      
+  }    
+}           
 
 export default App;
