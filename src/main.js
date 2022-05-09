@@ -26,10 +26,10 @@ if (location.href=="http://localhost:3000/"){
 }
 
 if (location.href!="http://localhost:3000/"){
-/*     let audio = new Audio('audios/main-theme.mp3');
+    let audio = new Audio('audios/main-theme.mp3');
         audio.play();
         audio.volume = 0.1;
-        audio.loop=true; */
+        audio.loop=true; 
     let cardList = App.createCardList();
     let duplicatedList = App.duplicateList(cardList);
     let shuffledList = App.shuffle(duplicatedList);

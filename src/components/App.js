@@ -62,6 +62,7 @@ const App = {
       miniDiv.appendChild(cardImageFront);  
       miniDiv.addEventListener('click', App.flipSelectedCard);        
     } 
+    console.log(duplicatedList)
     bigDiv.appendChild(player)
     bigDiv.appendChild(divCard);       
     return bigDiv 
