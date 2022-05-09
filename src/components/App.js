@@ -1,22 +1,20 @@
 import pokemon from '../data/pokemon/pokemon.js';
 import utilities from '../utilities.js';
 
-let selectedCardsMiniDiv = [];
+
 let turn=0;
 let matchCount=0;
 let counting=0;
 let cardList = pokemon.items; 
-
+let selectedCardsMiniDiv = [];
 const App = { 
   createCardList : () => {
     return cardList;
   },
-
   duplicateList : (cardList) => {
     let duplicatedList = cardList.concat(cardList);
     return duplicatedList;
   },
-
   shuffle : (duplicatedList)=>{
     let shuffled =[];
     shuffled = shuffled.concat(duplicatedList);
@@ -28,7 +26,6 @@ const App = {
     }
     return shuffled;
   },
-
   createBoardElements: (shuffled)=>{
     let bigDiv = document.createElement("div");
     let player = document.createElement('div');
@@ -78,13 +75,9 @@ const App = {
       cardImageFront.className = "card-image-front";
       cardImageFront.src = shuffled[i].image;
       miniDiv.appendChild(cardImageFront);  
-      miniDiv.addEventListener('click', App.flipSelectedCard);        
-
-    }       
-    return bigDiv; 
-
+      miniDiv.addEventListener('click', App.flipSelectedCard);}       
+    return bigDiv;
   },
-
   flipSelectedCard: function flipSelectedCard(){
     if (turn<2){
       turn++; 
@@ -99,26 +92,20 @@ const App = {
           setTimeout(function(){
             counting++;
             utilities.actualCount(counting);
-            App.checkMatch(selectedCardsMiniDiv);
+            App.checkMatch();
           },850) 
         }
       } 
     }
   },   
-  checkMatch: (selectedCardsMiniDiv)=>{
+  checkMatch:()=>{
     if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
-      App.match();
-      return true;
+      return App.match(selectedCardsMiniDiv);
     } else {
-      App.noMatch();
-      return false;
+      return App.noMatch(selectedCardsMiniDiv);
     }
   },
-
   match:()=>{
-    let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
-    audioMatch.volume = 0.9;
-    audioMatch.play();    
     matchCount++;
     selectedCardsMiniDiv[0].style.visibility ="hidden";
     selectedCardsMiniDiv[1].style.visibility ="hidden";
@@ -131,9 +118,8 @@ const App = {
       setTimeout(function(){
         utilities.modalWin(counting);
       },3000);
-    }  
- },
-
+    } 
+  },
   noMatch:()=>{
     setTimeout(function(){
       selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
@@ -147,5 +133,4 @@ const App = {
     },1000);        
   },  
 }           
-
 export default App;
