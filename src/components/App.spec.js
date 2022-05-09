@@ -13,10 +13,30 @@ describe ('tests para el archivo App.js', ()=>{
     let arr=[1,2,3,4,5,6,7,8,9];
     let shuffled = App.shuffle(arr);
     //assertion
-    expect(shuffled).not.toBe(arr);
+    expect(shuffled).not.toEqual(arr);
   })
-})
 
+  it('la función createBoardElements retorna una instancia de HTML', () => {
+    let arr=[1,2,3,4,5,6,7,8,9];
+    const div = App.createBoardElements(arr);
+    expect(div instanceof HTMLElement).toBe(true);
+  });
+
+  // it("flip selectedCard should be a function", () => {
+  //   let flip = App.flipSelectedCard
+  //   expect(typeof flip).toBe("function");
+  // });
+
+  it("checkMatch should return true ", ()=>{
+    let arr = [1,1];
+    let check = App.checkMatch(arr);
+    expect(check).toBe(true);
+  
+
+  });
+
+
+})
 /* test('la función createBoardElements devuelve un div',()=>{
   })
 
