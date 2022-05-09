@@ -79,8 +79,10 @@ const App = {
       cardImageFront.src = shuffled[i].image;
       miniDiv.appendChild(cardImageFront);  
       miniDiv.addEventListener('click', App.flipSelectedCard);        
+
     }       
     return bigDiv; 
+
   },
 
   flipSelectedCard: function flipSelectedCard(){
