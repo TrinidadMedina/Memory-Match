@@ -3,7 +3,7 @@ import utilities from '../utilities.js';
 
 let selectedCardsMiniDiv = [];
 let turn=0;
-let match=0;
+let matchCount=0;
 let counting=0;
 let cardList = pokemon.items; 
 
@@ -97,9 +97,9 @@ const App = {
       else{
         if (turn ===2){
           setTimeout(function(){
-             counting++;
-            divCount.textContent='Intentos: '+counting;
-            return App.checkMatch(selectedCardsMiniDiv);
+            counting++;
+            utilities.actualCount(counting);
+            App.checkMatch(selectedCardsMiniDiv);
           },850) 
         }
       } 
@@ -108,31 +108,33 @@ const App = {
   checkMatch: (selectedCardsMiniDiv)=>{
     if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
       App.match();
+      return true;
     } else {
       App.noMatch();
+      return false;
     }
   },
 
-  match:()=>{  
+  match:()=>{
     let audioMatch = new Audio(selectedCardsMiniDiv[0].audio);
     audioMatch.volume = 0.9;
     audioMatch.play();    
-    match++;
+    matchCount++;
     selectedCardsMiniDiv[0].style.visibility ="hidden";
     selectedCardsMiniDiv[1].style.visibility ="hidden";
     utilities.modalMatch(selectedCardsMiniDiv);
     utilities.catchPokemon(selectedCardsMiniDiv);
-    utilities.fillBar(cardList,match);
+    utilities.fillBar(cardList,matchCount);
     turn=0;
     selectedCardsMiniDiv = [];
-    if(match===cardList.length){
+    if(matchCount===cardList.length){
       setTimeout(function(){
         utilities.modalWin(counting);
       },3000);
-    }
+    }  
  },
 
-  noMatch: ()=>{
+  noMatch:()=>{
     setTimeout(function(){
       selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
       selectedCardsMiniDiv[1].style.transform = 'rotateY(0deg)';
@@ -142,8 +144,8 @@ const App = {
       audioNoMatch.play();
       turn=0;
       selectedCardsMiniDiv = []; 
-    },1000);      
-  }    
+    },1000);        
+  },  
 }           
 
 export default App;
