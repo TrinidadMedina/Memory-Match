@@ -27,19 +27,17 @@ describe ('tests para el archivo App.js', ()=>{
   //   expect(typeof flip).toBe("function");
   // });
 
-  it("checkMatch should return true ", ()=>{
-    let arr = [1,1];
+  it("checkMatch should return true if same name ", ()=>{
+    let arr = [{id: 1, name: 'trini'}, {id:2, name: 'trini'}];
     let check = App.checkMatch(arr);
     expect(check).toBe(true);
-  
-
+    let arr2 = [{id: 1, name: 'maca'}, {id:2, name: 'trini'}];
+    let check1 = App.checkMatch(arr2);
+    expect(check1).toBe(false);
   });
-
-
+  
 })
-/* test('la función createBoardElements devuelve un div',()=>{
-  })
-
+/* 
 test('la función flipSelectedCard devuelve:' 
   //'1. un div dado vuelta' 
   //'2. no permite dar vuelta más de 2' 
@@ -48,18 +46,4 @@ test('la función flipSelectedCard devuelve:'
 toHaveLength() cardlistduplicado
 toContain()
   })
-  
-test('la función checkMatch devuelve informacion si dos divs clikeados son iguales(true or false)',()=>{
-    let match
-  })
-})
-
-import App from './App.js';
-
-describe('App', () => {
-  it('should render without crashing', () => {
-    const el = App();
-    expect(el instanceof HTMLElement).toBe(true);
-  });
-}); 
  */

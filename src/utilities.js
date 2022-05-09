@@ -44,5 +44,9 @@ export default {
       let width = (match*100)/(cardList.length);
       document.getElementById("myBar").style.width = width + '%';
     },1500); 
-  } 
+  }, 
+
+  actualCount:(counting)=>{
+    document.getElementById('divCount').textContent='Intentos: '+counting;//
+  }
 }
