@@ -1,7 +1,7 @@
 import App from './components/App.js';
 
 let namePlayer = "";
-
+console.log(location.href);
 if (location.href=="https://macaparedes.github.io/SCL020-memory-match/src/"){
     document.getElementById("text").addEventListener('change',function(){
         namePlayer = document.getElementById("text").value;
