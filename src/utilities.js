@@ -39,7 +39,8 @@ export default {
       pokebola.src=selectedCardsMiniDiv[0].lastChild.currentSrc;
       pokebola.style.width='50px'; 
       pokebola.style.height='50px';
-      document.getElementById("divPokebolas").appendChild(pokebola);
+  divPokebolas.appendChild(pokebola);
+  console.log(divPokebolas,pokebola);
     },1500); 
   },
 

@@ -49,4 +49,11 @@ describe ('tests para el archivo App.js', ()=>{
     let noMatch = App.noMatch;
     expect(typeof noMatch).toBe("function");
   });
+
+  it("should work ", ()=>{
+    let card1 = "1";
+    let card2 = "2";
+    let result = App.checkMatch(card1,card2);
+    expect(result).toBe(false);
+  });
 })

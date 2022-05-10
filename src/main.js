@@ -1,8 +1,8 @@
 import App from './components/App.js';
 
 let namePlayer = "";
-console.log(location.href);
-if (location.href=="https://macaparedes.github.io/SCL020-memory-match/src/"){
+// console.log(window.location);
+if (window.location.pathname=="/"){
     document.getElementById("text").addEventListener('change',function(){
         namePlayer = document.getElementById("text").value;
         const saveToLocalStorage = () => {
@@ -24,7 +24,7 @@ if (location.href=="https://macaparedes.github.io/SCL020-memory-match/src/"){
     });   
 }
 
-if (location.href!="https://macaparedes.github.io/SCL020-memory-match/src/"){
+if (window.location.pathname!="/"){
     let audio = new Audio('audios/main-theme.mp3');
     audio.play();
     audio.volume = 0.6;

@@ -41,7 +41,7 @@ const App = {
     divCount.id ='divCount';
     divBar.id = "myProgress";
     bar.id = 'myBar';
-    divPokebolas.id = "divPokebolas";
+    divPokebolas.id = "cualquiercosa";
     divCard.id = "divCard";
     bigDiv.className = "big-div";
     player.className='player';
@@ -55,6 +55,7 @@ const App = {
     divBar.appendChild(bar);
     player.appendChild(divBar);
     player.appendChild(parCaptures);
+  
     player.appendChild(divPokebolas);
     bigDiv.appendChild(player);
     bigDiv.appendChild(divCard); 
@@ -92,20 +93,26 @@ const App = {
           setTimeout(function(){
             counting++;
             utilities.actualCount(counting);
-            App.checkMatch();
+            let matchoh = App.checkMatch(selectedCardsMiniDiv[0].name, selectedCardsMiniDiv[1].name);
+            if(matchoh){
+              App.match();
+            }else{
+              App.noMatch();
+            }
           },850) 
         }
       } 
     }
   },   
-  checkMatch:()=>{
-    if(selectedCardsMiniDiv[0].name==selectedCardsMiniDiv[1].name){
-      return App.match(selectedCardsMiniDiv);
+  checkMatch:(card1,card2)=>{
+    if(card1==card2){
+      return true//App.match();
     } else {
-      return App.noMatch(selectedCardsMiniDiv);
+      return  false //App.noMatch();
     }
   },
   match:()=>{
+
     matchCount++;
     selectedCardsMiniDiv[0].style.visibility ="hidden";
     selectedCardsMiniDiv[1].style.visibility ="hidden";
