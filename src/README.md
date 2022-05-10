@@ -2,21 +2,21 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+- [1. Preámbulo](#1-preámbulo)
+- [2. Resumen del proyecto](#2-resumen-del-proyecto)
+- [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
+- [4. Consideraciones generales](#4-consideraciones-generales)
+- [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
+- [6. Hacker edition](#6-hacker-edition)
+- [7. Consideraciones técnicas](#7-consideraciones-técnicas)
+- [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+- [9. Checklist](#9-checklist)
 
-***
+---
 
 ## 1. Preámbulo
 
-El juego [_Memory Match_](https://en.wikipedia.org/wiki/Concentration_(card_game)),
+El juego [_Memory Match_](<https://en.wikipedia.org/wiki/Concentration_(card_game)>),
 también conocido como _Concentration_, _Match Match_, _Match Up_, _Memory_,
 entre otros, es un juego de cartas en el que todas las cartas se ponen cara
 abajo sobre una superficie y se le dan la vuelta a dos cartas en cada turno. El
@@ -24,12 +24,12 @@ objetivo del juego es destapar parejas de cartas que coincidan.
 
 ![Concentration (card game)](https://user-images.githubusercontent.com/110297/135919005-66aefadb-c462-49e2-bf10-2374f2e47688.png)
 
-_Imagen tomada de [Wikipedia](https://en.wikipedia.org/wiki/Concentration_(card_game))_.
+_Imagen tomada de [Wikipedia](https://en.wikipedia.org/wiki/Concentration_(card*game))*.
 
 Ejemplos:
 
-* [Santa Tracker de Google](https://santatracker.google.com/matching.html)
-* [Match The Memory](https://matchthememory.com/play)
+- [Santa Tracker de Google](https://santatracker.google.com/matching.html)
+- [Match The Memory](https://matchthememory.com/play)
 
 ## 2. Resumen del proyecto
 
@@ -47,74 +47,74 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **Uso de HTML semántico**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
-  * [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-</p></details>
+  - [HTML semántico](https://curriculum.laboratoria.la/es/topics/html/02-html5/02-semantic-html)
+  - [Semantics - MDN Web Docs Glossary](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
+  </p></details>
 
 ### CSS
 
 - [ ] **Uso de selectores de CSS**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
-  * [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
-</p></details>
+  - [Intro a CSS](https://curriculum.laboratoria.la/es/topics/css/01-css/01-intro-css)
+  - [CSS Selectors - MDN](https://developer.mozilla.org/es/docs/Web/CSS/CSS_Selectors)
+  </p></details>
 
 - [ ] **Modelo de caja (box model): borde, margen, padding**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
-  * [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-  * [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  * [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
-  * [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
-</p></details>
+  - [Box Model & Display](https://curriculum.laboratoria.la/es/topics/css/01-css/02-boxmodel-and-display)
+  - [The box model - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+  - [Introduction to the CSS box model - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+  - [CSS display - MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/display)
+  - [display - CSS Tricks](https://css-tricks.com/almanac/properties/d/display/)
+  </p></details>
 
 - [ ] **Uso de flexbox en CSS**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-  * [Flexbox Froggy](https://flexboxfroggy.com/#es)
-  * [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
-</p></details>
+  - [A Complete Guide to Flexbox - CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+  - [Flexbox Froggy](https://flexboxfroggy.com/#es)
+  - [Flexbox - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+  </p></details>
 
 ### Web APIs
 
 - [ ] **Uso de selectores del DOM**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
-  * [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
-</p></details>
+  - [Manipulación del DOM](https://curriculum.laboratoria.la/es/topics/browser/02-dom/03-1-dom-methods-selection)
+  - [Introducción al DOM - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
+  - [Localizando elementos DOM usando selectores - MDN](https://developer.mozilla.org/es/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+  </p></details>
 
 - [ ] **Manejo de eventos del DOM (listeners, propagación, delegación)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
-  * [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
-  * [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
-  * [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
-</p></details>
+  - [Introducción a eventos - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
+  - [EventTarget.addEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener)
+  - [EventTarget.removeEventListener() - MDN](https://developer.mozilla.org/es/docs/Web/API/EventTarget/removeEventListener)
+  - [El objeto Event](https://developer.mozilla.org/es/docs/Web/API/Event)
+  </p></details>
 
 - [ ] **Manipulación dinámica del DOM**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
-  * [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
-  * [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
-  * [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
-  * [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
-  * [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
-</p></details>
+  - [Introducción al DOM](https://developer.mozilla.org/es/docs/Web/API/Document_Object_Model/Introduction)
+  - [Node.appendChild() - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/appendChild)
+  - [Document.createElement() - MDN](https://developer.mozilla.org/es/docs/Web/API/Document/createElement)
+  - [Document.createTextNode()](https://developer.mozilla.org/es/docs/Web/API/Document/createTextNode)
+  - [Element.innerHTML - MDN](https://developer.mozilla.org/es/docs/Web/API/Element/innerHTML)
+  - [Node.textContent - MDN](https://developer.mozilla.org/es/docs/Web/API/Node/textContent)
+  </p></details>
 
 ### JavaScript
 
@@ -122,72 +122,72 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **Arrays (arreglos)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Arreglos](https://curriculum.laboratoria.la/es/topics/javascript/04-arrays)
-  * [Array - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  * [Array.prototype.sort() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  * [Array.prototype.forEach() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  * [Array.prototype.map() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  * [Array.prototype.filter() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  * [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-</p></details>
+  - [Arreglos](https://curriculum.laboratoria.la/es/topics/javascript/04-arrays)
+  - [Array - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/)
+  - [Array.prototype.sort() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+  - [Array.prototype.forEach() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+  - [Array.prototype.map() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+  - [Array.prototype.filter() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+  - [Array.prototype.reduce() - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+  </p></details>
 
 - [ ] **Objetos (key, value)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
-</p></details>
+  - [Objetos en JavaScript](https://curriculum.laboratoria.la/es/topics/javascript/05-objects/01-objects)
+  </p></details>
 
 - [ ] **Variables (declaración, asignación, ámbito)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
-  * [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
-</p></details>
+  - [Valores, tipos de datos y operadores](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/01-values-variables-and-types)
+  - [Variables](https://curriculum.laboratoria.la/es/topics/javascript/01-basics/02-variables)
+  </p></details>
 
 - [ ] **Uso de condicionales (if-else, switch, operador ternario, lógica booleana)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
-  * [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
-</p></details>
+  - [Estructuras condicionales y repetitivas](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/01-conditionals-and-loops)
+  - [Tomando decisiones en tu código — condicionales - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/conditionals)
+  </p></details>
 
 - [ ] **Uso de bucles/ciclos (while, for, for..of)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
-  * [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
-</p></details>
+  - [Bucles (Loops)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/02-loops)
+  - [Bucles e iteración - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Loops_and_iteration)
+  </p></details>
 
 - [ ] **Funciones (params, args, return)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
-  * [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
-  * [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
-  * [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
-</p></details>
+  - [Funciones (control de flujo)](https://curriculum.laboratoria.la/es/topics/javascript/02-flow-control/03-functions)
+  - [Funciones clásicas](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/01-classic)
+  - [Arrow Functions](https://curriculum.laboratoria.la/es/topics/javascript/03-functions/02-arrow)
+  - [Funciones — bloques de código reutilizables - MDN](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Functions)
+  </p></details>
 
 - [ ] **Pruebas unitarias (unit tests)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
-</p></details>
+  - [Empezando con Jest - Documentación oficial](https://jestjs.io/docs/es-ES/getting-started)
+  </p></details>
 
 - [ ] **Módulos de ECMAScript (ES Modules)**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
-  * [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
-</p></details>
+  - [import - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/import)
+  - [export - MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/export)
+  </p></details>
 
 - [ ] **Uso de linter (ESLINT)**
 
@@ -207,10 +207,10 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **GitHub: Despliegue con GitHub Pages**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Sitio oficial de GitHub Pages](https://pages.github.com/)
-</p></details>
+  - [Sitio oficial de GitHub Pages](https://pages.github.com/)
+  </p></details>
 
 - [ ] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
 
@@ -228,18 +228,18 @@ Reflexiona y luego marca los objetivos que has llegado a entender y aplicar en t
 
 - [ ] **Planear y ejecutar testeos de usabilidad de prototipos en distintos niveles de fidelidad**
 
-  <details><summary>Links</summary><p>
+    <details><summary>Links</summary><p>
 
-  * [Intro a testeos usabilidad](https://coda.io/@bootcamp-laboratoria/contenido-ux/test-de-usabilidad-15)
-  * [Pruebas con Usuarios 1 — ¿Qué, cuándo y para qué testeamos?](https://eugeniacasabona.medium.com/pruebas-con-usuarios-1-qu%C3%A9-cu%C3%A1ndo-y-para-qu%C3%A9-testeamos-7c3a89b4b5e7)
-</p></details>
+  - [Intro a testeos usabilidad](https://coda.io/@bootcamp-laboratoria/contenido-ux/test-de-usabilidad-15)
+  - [Pruebas con Usuarios 1 — ¿Qué, cuándo y para qué testeamos?](https://eugeniacasabona.medium.com/pruebas-con-usuarios-1-qu%C3%A9-cu%C3%A1ndo-y-para-qu%C3%A9-testeamos-7c3a89b4b5e7)
+  </p></details>
 
 ## 4. Consideraciones generales
 
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
+- Este proyecto se debe resolver en duplas.
+- El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 4 semanas.
+- Tiempo para completarlo: Toma como referencia 4 semanas.
 
 ## 5. Criterios de aceptación mínimos del proyecto
 
@@ -328,14 +328,14 @@ profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
 
 Features/características extra sugeridas:
 
-* En lugar de consumir la data estática brindada en este repositorio, puedes
+- En lugar de consumir la data estática brindada en este repositorio, puedes
   consumir la data de forma dinámica, cargando un archivo JSON por medio de
   `fetch`. La carpeta `src/data` contiene una versión `.js` y una `.json` de
   de cada set datos.
-* Agregar nuevos sets de cartas.
-* Calcular puntuación basado en número de turnos.
-* Agregar timer y tener cuenta en puntuación.
-* 100% Coverage
+- Agregar nuevos sets de cartas.
+- Calcular puntuación basado en número de turnos.
+- Agregar timer y tener cuenta en puntuación.
+- 100% Coverage
 
 ## 7. Consideraciones técnicas
 
@@ -432,100 +432,100 @@ Antes de empezar a escribir código, debes definir qué deberá hacer el product
 en base al conocimiento que puedas obtener de tu usuario. Estas preguntas te
 pueden ayudar:
 
-* ¿Quiénes son los principales usuarios de producto?
-* ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
-* ¿Cuáles son los componentes principales de la interfaz y por qué?
-* ¿Cuándo utilizan o utilizarían el producto?
-* Toda tu investigación previa debe tener como resultado todas las Historias
+- ¿Quiénes son los principales usuarios de producto?
+- ¿Cuáles son los objetivos de estos usuarios en relación con el producto?
+- ¿Cuáles son los componentes principales de la interfaz y por qué?
+- ¿Cuándo utilizan o utilizarían el producto?
+- Toda tu investigación previa debe tener como resultado todas las Historias
   de Usuario de tu proyecto.
-* No hagas los prototipos de alta fidelidad de todas tus Historias. Comienza
+- No hagas los prototipos de alta fidelidad de todas tus Historias. Comienza
   solamente por los que se necesiten para tu Sprint 1 (semana 1 de trabajo). Más
   pistas en la guía de organización para el proyecto.
 
 Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 
-1. Una de las integrantes del equipo debe realizar un :fork_and_knife:
+1. Una de las integrantes del equipo debe realizar un :fork*and_knife:
    [fork](https://help.github.com/articles/fork-a-repo/) del repo de tu cohort,
-   tus _coaches_ te compartirán un _link_ a un repo y te darán acceso de lectura
+   tus \_coaches* te compartirán un _link_ a un repo y te darán acceso de lectura
    en ese repo. La otra integrante del equipo deber hacer un fork **del
    repositorio de su compañera** y
    [configurar](https://gist.github.com/BCasal/026e4c7f5c71418485c1) un `remote`
    hacia el mismo.
-2. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
-   tu _fork_ a tu computadora (copia local).
+2. :arrow*down: [Clona](https://help.github.com/articles/cloning-a-repository/)
+   tu \_fork* a tu computadora (copia local).
 3. 📦 Instala las dependencias del proyecto con el comando `npm install`. Esto
    asume que has instalado [Node.js](https://nodejs.org/) (que incluye [npm](https://docs.npmjs.com/)).
 4. Si todo ha ido bien, deberías poder ejecutar las :traffic_light:
    pruebas unitarias (unit tests) con el comando `npm test`.
 5. Para ver la interfaz de tu programa en el navegador, usa el comando
-  `npm start` para arrancar el servidor web y dirígete a
-  `http://localhost:5000` en tu navegador.
+   `npm start` para arrancar el servidor web y dirígete a
+   `http://localhost:5000` en tu navegador.
 6. A codear se ha dicho! :rocket:
 
 ### Contenido de referencia
 
 #### Diseño de experiencia de usuario (User Experience Design)
 
-* Investigación con usuarios / entrevistas
-* Principios de diseño visual
+- Investigación con usuarios / entrevistas
+- Principios de diseño visual
 
 #### Desarrollo Front-end
 
-* Unidad de testing en curso de JavaScript en LMS.
-* Unidad de arreglos en curso de JavaScript en LMS.
-* Unidad de objetos en curso de JavaScript en LMS.
-* Unidad de funciones en curso de JavaScript en LMS.
-* Unidad de DOM en curso de Browser JavaScript en LMS.
-* [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-* [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-* [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-* [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-* [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-* [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-* [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-* [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-* [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-es.html)
-* [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
-* [expresión vs sentencia](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
-* [datos atómicos vs datos estructurados](https://www.todojs.com/tipos-datos-javascript-es6/)
-* [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
-* [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
+- Unidad de testing en curso de JavaScript en LMS.
+- Unidad de arreglos en curso de JavaScript en LMS.
+- Unidad de objetos en curso de JavaScript en LMS.
+- Unidad de funciones en curso de JavaScript en LMS.
+- Unidad de DOM en curso de Browser JavaScript en LMS.
+- [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
+- [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
+- [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
+- [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
+- [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
+- [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
+- [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
+- [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
+- [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+- [json.org](https://json.org/json-es.html)
+- [expressions-vs-statements](https://2ality.com/2012/09/expressions-vs-statements.html)
+- [expresión vs sentencia](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
+- [datos atómicos vs datos estructurados](https://www.todojs.com/tipos-datos-javascript-es6/)
+- [Modulos: Export](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/export)
+- [Modulos: Import](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/import)
 
 #### Herramientas
 
-* [Git](https://git-scm.com/)
-* [GitHub](https://github.com/)
-* [GitHub Pages](https://pages.github.com/)
-* [Node.js](https://nodejs.org/)
-* [Jest](https://jestjs.io/)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [GitHub Pages](https://pages.github.com/)
+- [Node.js](https://nodejs.org/)
+- [Jest](https://jestjs.io/)
 
 #### Organización del Trabajo
 
-* [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s).
+- [Historias de Usuario](https://www.youtube.com/watch?v=ky6wFiF5vMk&t=344s).
   Ojo que Cris no diferencia _Definición de terminado_ de _Criterios de
   Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
-* [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
-* [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
+- [Cómo dividir H.U.](https://www.youtube.com/watch?v=Ueq786iZ30I&t=341s)
+- [Guía para Data Lovers](https://docs.google.com/presentation/d/e/2PACX-1vQhx9D36NjpH-Daea-ITPUDUzNL8ZiNAprq_7b5PSUrfutk45tEtaOLz2lmd8f54_5jX1hypDM8f8SM/pub?start=false&loop=false&delayms=60000)
 
 ## 9. Checklist
 
-* [ ] Usa VanillaJS.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra cartas _barajadas_ correctamente.
-* [ ] UI: Permite al usuario _destapar_ las cartas de 2 en 2.
-* [ ] UI: Deja destapadas las cartas que coincidan al destaparlas.
-* [ ] UI: Indica al usuario que ganó cuando sea relevante.
-* [ ] UI: Es _responsive_.
-* [ ] UI: La interfaz sigue los fundamentos de _visual design_.
+- [ ] Usa VanillaJS.
+- [ ] Pasa linter (`npm run pretest`)
+- [ ] Pasa tests (`npm test`)
+- [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+      lines y branches.
+- [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
+- [ ] Incluye historias de usuario en `README.md`.
+- [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+      `README.md`.
+- [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+      en `README.md`.
+- [ ] Incluye el listado de problemas que detectaste a través de tests de
+      usabilidad en el `README.md`.
+- [ ] UI: Muestra cartas _barajadas_ correctamente.
+- [ ] UI: Permite al usuario _destapar_ las cartas de 2 en 2.
+- [ ] UI: Deja destapadas las cartas que coincidan al destaparlas.
+- [ ] UI: Indica al usuario que ganó cuando sea relevante.
+- [ ] UI: Es _responsive_.
+- [ ] UI: La interfaz sigue los fundamentos de _visual design_.
