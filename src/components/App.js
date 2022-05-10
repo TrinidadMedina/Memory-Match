@@ -1,12 +1,12 @@
 import pokemon from '../data/pokemon/pokemon.js';
 import utilities from '../utilities.js';
 
-
-let turn=0;
 let matchCount=0;
 let counting=0;
 let cardList = pokemon.items; 
+let turn= 0;
 let selectedCardsMiniDiv = [];
+
 const App = { 
   createCardList : () => {
     return cardList;
@@ -41,7 +41,7 @@ const App = {
     divCount.id ='divCount';
     divBar.id = "myProgress";
     bar.id = 'myBar';
-    divPokebolas.id = "cualquiercosa";
+    divPokebolas.id = "divPokebolas";
     divCard.id = "divCard";
     bigDiv.className = "big-div";
     player.className='player';
@@ -55,7 +55,6 @@ const App = {
     divBar.appendChild(bar);
     player.appendChild(divBar);
     player.appendChild(parCaptures);
-  
     player.appendChild(divPokebolas);
     bigDiv.appendChild(player);
     bigDiv.appendChild(divCard); 
@@ -75,8 +74,9 @@ const App = {
       cardImageFront.id = 'cardImageFront';
       cardImageFront.className = "card-image-front";
       cardImageFront.src = shuffled[i].image;
-      miniDiv.appendChild(cardImageFront);  
-      miniDiv.addEventListener('click', App.flipSelectedCard);}       
+      miniDiv.appendChild(cardImageFront); 
+      miniDiv.addEventListener('click', App.flipSelectedCard);}
+
     return bigDiv;
   },
   flipSelectedCard: function flipSelectedCard(){
@@ -93,8 +93,8 @@ const App = {
           setTimeout(function(){
             counting++;
             utilities.actualCount(counting);
-            let matchoh = App.checkMatch(selectedCardsMiniDiv[0].name, selectedCardsMiniDiv[1].name);
-            if(matchoh){
+            let cardsForMatch = App.checkMatch(selectedCardsMiniDiv[0].name, selectedCardsMiniDiv[1].name);
+            if(cardsForMatch){
               App.match();
             }else{
               App.noMatch();
@@ -106,21 +106,24 @@ const App = {
   },   
   checkMatch:(card1,card2)=>{
     if(card1==card2){
-      return true//App.match();
+      return true
     } else {
-      return  false //App.noMatch();
+      return  false
     }
   },
+  resetValues: (turn)=>{
+    turn=0;
+    selectedCardsMiniDiv=[];
+    return turn
+  },
   match:()=>{
-
     matchCount++;
     selectedCardsMiniDiv[0].style.visibility ="hidden";
     selectedCardsMiniDiv[1].style.visibility ="hidden";
     utilities.modalMatch(selectedCardsMiniDiv);
     utilities.catchPokemon(selectedCardsMiniDiv);
     utilities.fillBar(cardList,matchCount);
-    turn=0;
-    selectedCardsMiniDiv = [];
+    App.resetValues();
     if(matchCount===cardList.length){
       setTimeout(function(){
         utilities.modalWin(counting);
@@ -135,8 +138,7 @@ const App = {
       audioNoMatch.playbackRate=2;
       audioNoMatch.volume = 0.7;
       audioNoMatch.play();
-      turn=0;
-      selectedCardsMiniDiv = []; 
+      App.resetValues(); 
     },1000);        
   },  
 }           
