@@ -5,10 +5,10 @@ describe ('tests para la función createCardList', ()=>{
     let cardList = App.createCardList;
     expect(typeof cardList).toBe('function');
   });  
-  it('cardList should be an object', ()=>{
-    let cardList1 = App.createCardList();
-    expect(typeof cardList1).toBe("object");
-  }); 
+    it('createCardList should return an array', () => {
+    let cardList = App.createCardList();
+    expect(typeof cardList).toBe('object');
+  });  
 })
 describe ('tests para la función duplicateList', ()=>{
   test('retorna un arreglo duplicado',()=>{
@@ -16,9 +16,11 @@ describe ('tests para la función duplicateList', ()=>{
     let duplicated = App.duplicateList(arr);
     expect(duplicated).toHaveLength(arr.length*2);
   })
+ 
   test('it should be a function', ()=> {
-    let duplicateList = App.duplicateList;
-    expect(typeof duplicateList).toBe('function');
+    let arr =[1,2,3,4,5,6,7,8,9];
+    let duplicateList = App.duplicateList(arr);
+    expect(typeof duplicateList).toBe('object');
   })
   test('it should return an array', ()=> {
     let arr=[1,2];
@@ -35,7 +37,7 @@ describe ('test para la función shuffle', ()=>{
 })
 describe ('tests para la función createBoardElements', ()=>{
   test('la función createBoardElements retorna una instancia de HTML', () => {
-    let arr=[1,2,3,4,5,6,7,8,9];
+    let arr=[1,2,3];
     const div = App.createBoardElements(arr);
     expect(div instanceof HTMLElement).toBe(true);
   });
@@ -85,9 +87,14 @@ describe ('tests para la función resetValues', ()=>{
     let resetValues = App.resetValues;
     expect(typeof resetValues).toBe("function");
   })
-   it("it should work", ()=>{
-    let turn = 1;
+  it("it should be a function", ()=>{
     let resetValues = App.resetValues();
-    expect(resetValues).toBe(0);
+    expect(typeof resetValues).toBe("undefined");
   })
+
 })
+
+
+
+
+

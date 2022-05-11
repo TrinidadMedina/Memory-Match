@@ -111,10 +111,10 @@ const App = {
       return  false
     }
   },
-  resetValues: (turn)=>{
+  resetValues: ()=>{
     turn=0;
     selectedCardsMiniDiv=[];
-    return turn
+    return 
   },
   match:()=>{
     matchCount++;
