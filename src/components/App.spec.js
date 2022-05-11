@@ -14,6 +14,7 @@ describe ('tests para la función duplicateList', ()=>{
     let arr =[1,2,3,4,5,6,7,8,9];
     expect(App.duplicateList(arr)).toHaveLength(arr.length*2);
   })
+ 
   test('it should be a function', ()=> {
     expect(typeof App.duplicateList).toBe('function');
   })
@@ -79,15 +80,14 @@ describe ('tests para la función resetValues', ()=>{
   it("it should be a function", ()=>{
     expect(typeof App.resetValues).toBe("function");
   })
+
   it("it should reset value", ()=>{
     let cards = [{name:"trini",id:"1"},{name:"maca",id:2}];
     expect(App.resetValues(cards)).toEqual([]);
   })
 })
-
-//opciones para llegar al 70:
-//tirar cosas al utiities
-//lograr testear funciones sin parametros
-//test tothrow
-//test tocontain (un div)
-//lograr pasarle parametros 
+  it("it should be a function", ()=>{
+    let resetValues = App.resetValues();
+    expect(typeof resetValues).toBe("undefined");
+  })
+})

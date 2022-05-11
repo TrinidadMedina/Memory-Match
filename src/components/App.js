@@ -121,7 +121,6 @@ const App = {
       return  false
     }
   },
-
   match:(selectedCardsMiniDiv)=>{
     matchCount++;
     selectedCardsMiniDiv[0].style.visibility ="hidden";
