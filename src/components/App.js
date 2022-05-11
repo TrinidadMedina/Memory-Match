@@ -80,14 +80,8 @@ const App = {
     }
     return bigDiv;
   },
-
-  resetValues: ()=>{
-    turn=0;
-    selectedCardsMiniDiv=[];
-    return selectedCardsMiniDiv;
-  },
   
-  flipSelectedCard:function (){
+  flipSelectedCard: function (){
     if (turn<2){
       turn++; 
       this.style.transform = 'rotateY(180deg)';
@@ -104,9 +98,9 @@ const App = {
             utilities.actualCount(counting);
             let cardsForMatch = App.checkMatch(selectedCardsMiniDiv[0].name, selectedCardsMiniDiv[1].name);
             if(cardsForMatch){
-              App.match(selectedCardsMiniDiv);
+              App.match();
             }else{
-              App.noMatch(selectedCardsMiniDiv);
+              App.noMatch();
             }
           },850) 
         }
@@ -121,31 +115,42 @@ const App = {
       return  false
     }
   },
-  match:(selectedCardsMiniDiv)=>{
-    matchCount++;
-    selectedCardsMiniDiv[0].style.visibility ="hidden";
-    selectedCardsMiniDiv[1].style.visibility ="hidden";
-    utilities.modalMatch(selectedCardsMiniDiv);
-    utilities.catchPokemon(selectedCardsMiniDiv);
-    utilities.fillBar(cardList,matchCount);
-    App.resetValues(selectedCardsMiniDiv);
-    if(matchCount===cardList.length){
-      setTimeout(function(){
-        utilities.modalWin(counting);
-      },3000);
-    } 
+
+  match:()=>{
+    setTimeout(function(){
+      matchCount++;
+      selectedCardsMiniDiv[0].style.visibility ="hidden";
+      selectedCardsMiniDiv[1].style.visibility ="hidden";
+      utilities.modalMatch(selectedCardsMiniDiv);
+      utilities.catchPokemon(selectedCardsMiniDiv);
+      utilities.fillBar(cardList,matchCount);
+      App.resetValues();
+      if(matchCount===cardList.length){
+        setTimeout(function(){
+          utilities.modalWin(counting);
+        },3000);
+      } 
+    },1)
+    return   
   },
-  
-  noMatch:(selectedCardsMiniDiv)=>{
+
+  noMatch:()=>{
     setTimeout(function(){
       selectedCardsMiniDiv[0].style.transform = 'rotateY(0deg)';
-    selectedCardsMiniDiv[1].style.transform = 'rotateY(0deg)';
+      selectedCardsMiniDiv[1].style.transform = 'rotateY(0deg)';
       let audioNoMatch = new Audio("audios/nope.mp3");
       audioNoMatch.playbackRate=2;
       audioNoMatch.volume = 0.7;
       audioNoMatch.play();
-      App.resetValues(selectedCardsMiniDiv); 
-    },1000);        
+      App.resetValues(); 
+    },1000); 
+    return      
   },  
+
+  resetValues: ()=>{
+    turn=0;
+    selectedCardsMiniDiv=[];
+    return
+  },
 }           
 export default App;

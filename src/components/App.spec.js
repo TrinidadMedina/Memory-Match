@@ -54,13 +54,20 @@ describe ('tests para función match', ()=>{
   it("match should be a function", () => {
     expect(typeof App.match).toBe("function");
   });
+  it("it should return undefined", ()=>{
+    expect(typeof App.match()).toBe("undefined");
 
+})
 })
 
 describe ('tests para la función noMatch', ()=>{
   it("noMatch should be a function", () => {
     expect(typeof App.noMatch).toBe("function");
   });
+  
+  it("it should return undefined", ()=>{
+    expect(typeof App.noMatch()).toBe("undefined");
+  })
 })
 
 describe ('tests para la función checkMatch', ()=>{
@@ -81,13 +88,16 @@ describe ('tests para la función resetValues', ()=>{
     expect(typeof App.resetValues).toBe("function");
   })
 
-  it("it should reset value", ()=>{
-    let cards = [{name:"trini",id:"1"},{name:"maca",id:2}];
-    expect(App.resetValues(cards)).toEqual([]);
-  })
-})
   it("it should be a function", ()=>{
     let resetValues = App.resetValues();
     expect(typeof resetValues).toBe("undefined");
   })
 })
+
+
+/*   it("it should reset value", ()=>{
+    let cards = [{name:"trini",id:"1"},{name:"maca",id:2}];
+    expect(App.resetValues(cards)).toEqual([]);
+  }) */
+
+
