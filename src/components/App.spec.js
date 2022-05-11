@@ -2,99 +2,92 @@ import App from './App.js';
 
 describe ('tests para la función createCardList', ()=>{
   it('createCardList should be a function', () => {
-    let cardList = App.createCardList;
-    expect(typeof cardList).toBe('function');
+    expect(typeof App.createCardList).toBe('function');
   });  
-    it('createCardList should return an array', () => {
-    let cardList = App.createCardList();
-    expect(typeof cardList).toBe('object');
-  });  
+  it('cardList should be an object', ()=>{
+    expect(typeof App.createCardList()).toBe("object");
+  }); 
 })
+
 describe ('tests para la función duplicateList', ()=>{
   test('retorna un arreglo duplicado',()=>{
     let arr =[1,2,3,4,5,6,7,8,9];
-    let duplicated = App.duplicateList(arr);
-    expect(duplicated).toHaveLength(arr.length*2);
+    expect(App.duplicateList(arr)).toHaveLength(arr.length*2);
   })
  
   test('it should be a function', ()=> {
-    let arr =[1,2,3,4,5,6,7,8,9];
-    let duplicateList = App.duplicateList(arr);
-    expect(typeof duplicateList).toBe('object');
+    expect(typeof App.duplicateList).toBe('function');
   })
   test('it should return an array', ()=> {
     let arr=[1,2];
-    let duplicateList = App.duplicateList(arr);
-    expect(typeof duplicateList).toBe('object');
+    expect(typeof App.duplicateList(arr)).toBe('object');
   })
 })
+
 describe ('test para la función shuffle', ()=>{
   test('la función shuffle retorna un arreglo desordenado',()=>{
     let arr=[1,2,3,4,5,6,7,8,9];
-    let shuffled = App.shuffle(arr);
-    expect(shuffled).not.toEqual(arr);
+    expect(App.shuffle(arr)).not.toEqual(arr);
   })
 })
+
 describe ('tests para la función createBoardElements', ()=>{
   test('la función createBoardElements retorna una instancia de HTML', () => {
-    let arr=[1,2,3];
-    const div = App.createBoardElements(arr);
-    expect(div instanceof HTMLElement).toBe(true);
+    let arr=[1,2,3,4,5,6,7,8,9];
+    expect(App.createBoardElements(arr) instanceof HTMLElement).toBe(true);
   });
 })
+
 describe ('tests para la función flipSelectedCard', ()=>{
   it("flip selectedCard should be a function", () => {
-    let flip = App.flipSelectedCard;
-    expect(typeof flip).toBe("function");
-    //make visible divs (this)
+    expect(typeof App.flipSelectedCard).toBe("function");
   });
 })
+
 describe ('tests para función checkMatch', ()=>{
   it("checkMatch should be a function", () => {
-    let checkMatch = App.checkMatch;
-    expect(typeof checkMatch).toBe("function");
+    expect(typeof App.checkMatch).toBe("function");
   });
 })
+
 describe ('tests para función match', ()=>{
   it("match should be a function", () => {
-    let match = App.match;
-    expect(typeof match).toBe("function");
+    expect(typeof App.match).toBe("function");
   });
+
 })
+
 describe ('tests para la función noMatch', ()=>{
   it("noMatch should be a function", () => {
-    let noMatch = App.noMatch;
-    expect(typeof noMatch).toBe("function");
+    expect(typeof App.noMatch).toBe("function");
   });
 })
+
 describe ('tests para la función checkMatch', ()=>{
   it("with diferent value cards should return false", ()=>{
     let card1 = "1";
     let card2 = "2";
-    let result = App.checkMatch(card1,card2);
-    expect(result).toBe(false);
+    expect(App.checkMatch(card1,card2)).toBe(false);
   });
   it("with same value cards should return false", ()=>{
     let card1 = "1";
     let card2 = "1";
-    let result = App.checkMatch(card1,card2);
-    expect(result).toBe(true);
+    expect(App.checkMatch(card1,card2)).toBe(true);
   });
 })
 
 describe ('tests para la función resetValues', ()=>{
   it("it should be a function", ()=>{
-    let resetValues = App.resetValues;
-    expect(typeof resetValues).toBe("function");
+    expect(typeof App.resetValues).toBe("function");
   })
+
+  it("it should reset value", ()=>{
+    let cards = [{name:"trini",id:"1"},{name:"maca",id:2}];
+    expect(App.resetValues(cards)).toEqual([]);
+  })
+})
   it("it should be a function", ()=>{
     let resetValues = App.resetValues();
     expect(typeof resetValues).toBe("undefined");
   })
-
 })
-
-
-
-
-
