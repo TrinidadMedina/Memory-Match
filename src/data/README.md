@@ -1,74 +1,63 @@
-funciones:
+### Definición del producto
 
-mostrar nombre
-- toma: caja de texto value
-- devuelve: nombre
-- funcion: desde html1 a js1 a html2
+Proceso de diseño
+Problema - Solución
 
-boton start
-- toma: click
-- devuelve: html2
-- desde html1 a html2
+### Historias de usuario
 
-crear lista cartas
-- toma: items pokemon
-- devuelve: lista cartas
-- desde base de datos a js2
+_research_
+Necesidades usuario
+hacer/ver
 
-duplicar lista cartas
--toma lista cartas
-- devuelve: cartas duplicadas
-- desde js2 a js2
+_definition of done_
+Definición de terminado
+Criterios de aceptación
 
-shufflear lista cartas
-- toma: cartas duplicadas
-- devuelve: cartas shufleadas
-- desde js2 a js2
+1. Dado un set de cartas, barajar las cartas y mostrarlas en la interfaz.
+2. Permitir al usuario _destapar_ las cartas de 2 en 2.
+3. Dejar destapadas las cartas que coincidan al destaparlas.
+4. Indicar al usuario que ganó cuando haya destapado todas las cartas.
+5. Ser _responsive_, es decir, debe visualizarse sin problemas desde distintos
+   tamaños de pantallas: móviles, tablets y desktops.
+6. Que la interfaz siga los fundamentos de _visual design_.
 
-crear tablero
-- toma: cartas duplicadas (largo, imagenes)
-- devuelve tablero
-- desde js2 a js1
+### Diseño de la Interfaz de Usuario
 
-insertar tablero
-- toma: div html2
-- devuelve: tablero div html2
-- desde js1 a html2
+#### Prototipo de baja fidelidad
 
-flip cartas
-- toma: click html2
-- devuelve carta girada en html2
-- devuelve divs girados a js2
-- desde js2 a html2, desde js2 a js2
+![alt text](/src/pictures/modal-win.png)
 
-revisar match
-- toma: divs girados
-- devuelve: match / no match
-desde js2 a js2
+#### Prototipo de alta fidelidad
 
-no match:
-- toma: revisar match, divs girados
-- devuelve divs girados
-desde js2 a html2
+IMG
 
-match:
-- toma: revisar match, divs girados
-- devuelve: modal match, pokemones, barra sube.
-- desde js2 a html2?
+#### Testeos de usabilidad
 
-modal match:
-- toma div html2, divs girados
-- devuelve div mostrado por unos segundos
+Problemas de usabilidad detectados:
 
-barra sube:
-- toma div html2, match
-- devuelve: barra subida en html2
-- desde 
+- 3 cartas
+- sonido de match
+- letra poco legible
+- Vuelta de carta muy rápida
+- Poco conexión con el usuario (puntos, capturas, etc.)
 
-pokemones van al jugador
--toma divs girados, div html(creado en js)
-- devuelve pokemones al jugador html2
+#### Planificación
 
-modal win
-
-reiniciar
+Plan de trabajo
+Sprint 1. Experiencia de usuario
+Historias de usuario
+Prototipo baja fidelidad
+Prototipo alta fidelidad
+Sprint 2. Funciones en simple (arreglo de 4 cartas)
+Botón iniciar: mostrar tarjetas ocultas, agarrar, revolver.
+click 1: mostrar (traer) y mantener. Reconocer tarjeta marcada.
+click 2: mostrar (traer) y mantener (límite de tiempo + deshabilitar click). Reconocer tarjeta marcada. comparar ambas tarjetas. volver a ocultar O dejar dadas vuelta.
+Volver a jugar = iniciar
+Sprint 3. CSS y uso de todas las cartas
+Imitar prototipo. Usar valores estéticos que salen en la guía.
+Hacerlo responsive.
+Incluir algo divertido para niñxs. (animación? selector con forma de pokebola? meme al finalizar el juego? selección de personaje? jueguito cuando se hace match? sonido pokemon match?)
+Sprint 4.
+hacer readme
+hacer tests
+usar Git Hub Pages
