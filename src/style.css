@@ -89,7 +89,7 @@ body {
   border-right: 24px solid #fff;
   border-top: 12px solid #fff;
   border-bottom: 20px solid transparent;
-  left: 270px;
+  left: 190px;
   bottom: -24px;
 }
 
@@ -135,7 +135,6 @@ body {
   position: relative;
 }
 .logo-player {
-  /* position: absolute; */
   width: 90%;
 }
 #myProgress {
@@ -159,7 +158,6 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 .div-card {
-  outline: 2px solid red;
   margin: 5%;
   padding: 0%;
   perspective: 100%;
@@ -325,19 +323,8 @@ body {
   align-self: center;
 }
 
-@keyframes modal-effect {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 /*======= RESPONSIVE INDEX ===========*/
-@media (max-width: 1055px) {
+@media (max-width: 800px) {
   .container-index {
     flex-direction: column;
     padding-bottom: 0;
@@ -350,7 +337,7 @@ body {
     width: 90%;
     max-width: 100%;
     min-height: 50vh;
-    height: auto;
+    /* height: auto; */
   }
   .a {
     align-self: center;
@@ -521,7 +508,6 @@ body {
     height: 320px;
   }
   .player {
-    outline: 2px solid yellow;
     font-size: small;
     min-width: 60%;
   }
