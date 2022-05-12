@@ -7,6 +7,9 @@ Problema - Solución
 
 _research_
 Necesidades usuario
+Entretención
+Estimulos (sonidos, imagenes de pokemon, Ash, etc.)
+
 hacer/ver
 
 _definition of done_
@@ -25,20 +28,21 @@ Criterios de aceptación
 
 #### Prototipo de baja fidelidad
 
-![alt text](/src/pictures/modal-win.png)
+![Prototipo de Baja Fidelidad](/src/pictures/prototipo-baja1.png)
+![Prototipo de Baja Fidelidad](/src/pictures/prototipo-baja2.png)
 
 #### Prototipo de alta fidelidad
 
-IMG
+![Prototipo de Alta Fidelidad](/src/pictures/prototipo-alta.png)
 
 #### Testeos de usabilidad
 
 Problemas de usabilidad detectados:
 
-- 3 cartas
-- sonido de match
-- letra poco legible
-- Vuelta de carta muy rápida
+- Inicialmente usuari@ podía dar vuelta 3 cartas al mismo tiempo.
+- Sonido de match se escuchaba a muy bajo volumen.
+- letra poco legible.
+- Carta se daba vuelta muy rápido.
 - Poco conexión con el usuario (puntos, capturas, etc.)
 
 #### Planificación
