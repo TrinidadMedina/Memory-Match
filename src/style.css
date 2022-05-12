@@ -1,8 +1,4 @@
 @font-face {
-  font-family: PokemonHollow;
-  src: url("fonts/Pokemon\ Hollow.ttf");
-}
-@font-face {
   font-family: PokemonSolid;
   src: url("fonts/Pokemon\ Solid.ttf");
 }
@@ -51,26 +47,19 @@ body {
   border-radius: 5%;
   height: 100vh;
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 98vh;
+  max-height: 100vh;
   background-image: url(pictures/Fondo\ Cielo\ PokemonS.png);
-  height: auto;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100%;
-  display: block;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  flex-wrap: nowrap;
 }
 .img-ash {
   max-width: 50%;
   align-self: flex-end;
-  padding: 0%;
-  margin: 0%;
-  overflow: auto;
-  width: 60%;
-  height: auto;
 }
 .name-input {
   padding: 2%;
@@ -109,8 +98,8 @@ body {
 #gameContainer {
   height: 100vh;
   width: 100%;
-  background-position: 0%;
-  display: block;
+  /* background-position: 0%; */
+  /* display: block; */
   min-height: 100vh;
 }
 .big-div {
@@ -170,11 +159,12 @@ body {
   grid-template-columns: repeat(3, 1fr);
 }
 .div-card {
+  outline: 2px solid red;
   margin: 5%;
   padding: 0%;
   perspective: 100%;
-  width: 400px;
-  height: 420px;
+  width: 600px;
+  height: 620px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
@@ -433,9 +423,9 @@ body {
     font-family: PokemonDS;
   }
   .div-card {
-    margin: 5%;
+    margin: 1%;
     padding: 0%;
-    /* width: 90%; */
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
@@ -509,5 +499,30 @@ body {
     width: 80%;
     position: relative;
     align-self: inherit;
+  }
+  .player {
+    display: flex;
+    flex-direction: column;
+    line-height: 2;
+    width: 30%;
+    /* height: 30%; */
+    align-self: center;
+    padding: 1% 5% 0% 5%;
+    margin-top: 5%;
+    margin-left: 1%;
+    background-color: rgb(242, 242, 242, 0.7);
+    border-radius: 5%;
+    font-family: PokemonDS;
+  }
+}
+@media (max-width: 450px) {
+  .div-card {
+    width: 300px;
+    height: 320px;
+  }
+  .player {
+    outline: 2px solid yellow;
+    font-size: small;
+    min-width: 60%;
   }
 }
