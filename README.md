@@ -36,8 +36,8 @@ Pruébalo! https://macaparedes.github.io/SCL020-memory-match/
 
 ### Prototipo de baja fidelidad
 
-<img src="pictures/prototipo-baja1.jpg" alt="drawing" style="width:300px;"/>
-<span><img src="pictures/prototipo-baja2.jpg" alt="drawing" style="width:278.5px;"/></span>
+<img src="src/pictures/prototipo-baja1.jpg" alt="drawing" style="width:300px;"/>
+<span><img src="src/pictures/prototipo-baja2.jpg" alt="drawing" style="width:278.5px;"/></span>
 
 ### Prototipo de alta fidelidad
 
